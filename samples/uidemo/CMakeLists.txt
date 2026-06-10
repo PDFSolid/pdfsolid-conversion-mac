@@ -1,0 +1,75 @@
+cmake_minimum_required(VERSION 3.12)
+
+if(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64|AMD64")
+    set(CMAKE_OSX_ARCHITECTURES "x86_64")
+elseif(CMAKE_SYSTEM_PROCESSOR MATCHES "aarch64|arm")
+    set(CMAKE_OSX_ARCHITECTURES "arm64")
+endif()
+
+message(${CMAKE_OSX_ARCHITECTURES})
+set(CMAKE_OSX_DEPLOYMENT_TARGET "10.15")
+message(${CMAKE_OSX_DEPLOYMENT_TARGET})
+
+if(${CMAKE_OSX_ARCHITECTURES} MATCHES "x86_64")
+    set(PROJECT_TEST_NAME "uidemo_x64")
+elseif(${CMAKE_OSX_ARCHITECTURES} MATCHES "arm64")
+    set(PROJECT_TEST_NAME "uidemo_arm64")
+endif()
+
+message(${PROJECT_TEST_NAME})
+
+project(${PROJECT_TEST_NAME} LANGUAGES C CXX OBJC OBJCXX)
+
+set(COMPDKIT_CONVERSION_SDK_VERSION ${PROJECT_VERSION})
+
+include_directories(${CMAKE_SOURCE_DIR}/../../lib/PDFSolid.framework/Headers)
+
+set(RESOURCE_FILES)
+file(GLOB RESOURCE_FILES "${CMAKE_SOURCE_DIR}/resource/*")
+
+set(UIDEMO_SRC
+    main.m
+    AppDelegate.m
+    ViewController.m
+)
+
+
+add_executable(${PROJECT_TEST_NAME} ${UIDEMO_SRC})
+
+set_target_properties(${PROJECT_TEST_NAME} PROPERTIES
+    MACOSX_BUNDLE TRUE
+    MACOSX_BUNDLE_GUI_IDENTIFIER com.pdfsolid.conversion
+    MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
+    MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION}
+    RESOURCE "MainMenu.xib"
+    INSTALL_RPATH "@executable_path/../Frameworks"
+    BUILD_WITH_INSTALL_RPATH TRUE
+)
+
+target_compile_options(${PROJECT_TEST_NAME} PRIVATE
+    -fobjc-arc
+)
+
+find_library(COCOA_LIBRARY Cocoa REQUIRED)
+find_library(FOUNDATION_LIBRARY Foundation REQUIRED)
+find_library(APPKIT_LIBRARY AppKit REQUIRED)
+find_library(UNIFORM_TYPE_IDENTIFIERS_LIBRARY UniformTypeIdentifiers)
+
+
+if(${CMAKE_OSX_ARCHITECTURES} MATCHES "x86_64")
+   set(PDFSolid_LIB ${CMAKE_SOURCE_DIR}/../../lib/PDFSolid)
+elseif(${CMAKE_OSX_ARCHITECTURES} MATCHES "arm64")
+   set(PDFSolid_LIB ${CMAKE_SOURCE_DIR}/../../lib/PDFSolid)
+endif()
+
+
+target_link_libraries(${PROJECT_TEST_NAME} PRIVATE
+    objc
+    ${COCOA_LIBRARY}
+    ${FOUNDATION_LIBRARY}
+    ${APPKIT_LIBRARY}
+    ${UNIFORM_TYPE_IDENTIFIERS_LIBRARY}
+   ${PDFSolid_LIB}
+)
+
+
