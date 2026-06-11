@@ -1,41 +1,43 @@
-# PDFSolid Conversion SDK for Mac (Objective-C)
+# PDFSolid Conversion SDK for macOS (Objective-C)
 
-A high-performance Objective-C library for extracting and transforming PDF content — text, images, tables, links, and annotations — into various file formats while preserving the original document layout.
+High-performance Objective-C SDK for converting PDF to Word, Excel, PowerPoint, HTML, Image, TXT, RTF, CSV, JSON, Markdown, Searchable PDF, and OFD with AI-powered OCR, layout analysis, and table recognition.
 
-## Supported Conversions
+## Features
 
-| Output Format | Extension |
-| ------------- | --------- |
-| Word | .docx |
-| Excel | .xlsx |
-| PowerPoint | .pptx |
-| HTML | .html |
-| CSV | .csv |
-| Image | .png, .jpg, .jpeg, .jpeg2000, .bmp, .tiff, .tga, .gif, .webp |
-| Plain Text | .txt |
-| Rich Text Format | .rtf |
-| Searchable PDF | .pdf |
-| OFD | .ofd |
-| Structured Data | .json |
-| Markdown | .md |
+- **PDF to Word** (.docx) — Flow and Box layout modes
+- **PDF to Excel** (.xlsx) — per-table, per-page, or per-document worksheet options
+- **PDF to PowerPoint** (.pptx)
+- **PDF to HTML** (.html) — single/multi-page with optional bookmark navigation
+- **PDF to CSV** (.csv)
+- **PDF to Image** (.png, .jpg, .jpeg, .jpeg2000, .bmp, .tiff, .tga, .gif, .webp) — color/grayscale/binary, configurable scaling
+- **PDF to Plain Text** (.txt) — optional table format preservation
+- **PDF to RTF** (.rtf)
+- **PDF to Searchable PDF** (.pdf) — OCR with transparent text layer
+- **PDF to OFD** (.ofd) — OCR, page background preservation, transparent text layer
+- **PDF to JSON** (.json) — structured data with table extraction
+- **PDF to Markdown** (.md)
 
-## AI-Powered Document Tools
+### AI-Powered Document Tools
 
-- **Optical Character Recognition (OCR)** — Recognize text from scanned documents and images.
-- **Layout Analysis** — AI-based document structure parsing (paragraphs, tables, figures, etc.).
-- **Table Recognition** — Reconstruct table structure including merged cells and borderless tables.
-- **Custom AI Engine** — Plug in your own OCR/Layout/Table model via callbacks (SDK v4.1.0+).
+- **OCR** — Optical Character Recognition for scanned documents and images
+- **Layout Analysis** — AI-based document structure parsing
+- **Table Recognition** — AI-based table structure reconstruction
+- **Custom AI Models** — plug in your own OCR, layout, or table engine via callbacks (SDK v1.1.0+)
 
 ## Requirements
 
 | Platform | System Requirements | Development Environment |
 | -------- | ------------------- | ----------------------- |
-| macOS | macOS 10.14+ (Intel, Apple Silicon) | Xcode 13.0 or higher |
-| iOS | iOS 13.0+ | Xcode 13.0+ and iOS SDK 13.0+ |
+| macOS | macOS 10.14+ (Intel, Apple Silicon) | Xcode 13.0+ |
+| iOS | iOS 13.0+ | Xcode 13.0+ |
 
 ## Quick Start
 
-### 1. Apply License
+### 1. Get a License
+
+Contact [sales@pdfsolid.com](mailto:sales@pdfsolid.com) for a 30-day free trial or commercial license.
+
+### 2. Apply License and Initialize
 
 ```objective-c
 #import "conversion.h"
@@ -45,115 +47,100 @@ ErrorCode code = [LibraryManager licenseVerify:@"LICENSE_KEY"];
 if (code != ErrorCodeSuccess) {
     return;
 }
-```
-
-### 2. Initialize the SDK
-
-```objective-c
 [LibraryManager initialize:@"PDFSolid_Conversion_SDK/resource"];
 ```
 
-### 3. Convert PDF to Word
+### 3. Convert
 
 ```objective-c
 WordOptions *options = [[WordOptions alloc] init];
-options.pageLayoutMode = PageLayoutModeFlow;
-options.containImage = YES;
-options.containAnnotation = YES;
-
 [CPDFConversion startPDFToWord:@"input.pdf"
                       password:@""
                     outputPath:@"output.docx"
                        options:options];
 ```
 
-### 4. Convert PDF to Excel
-
-```objective-c
-ExcelOptions *options = [[ExcelOptions alloc] init];
-options.excelWorksheetOption = ExcelWorksheetForTable;
-
-[CPDFConversion startPDFToExcel:@"input.pdf"
-                       password:@""
-                     outputPath:@"output.xlsx"
-                        options:options];
-```
-
-### 5. Convert PDF with OCR
-
-```objective-c
-[LibraryManager setDocumentAIModel:@"path/documentai.model"];
-
-WordOptions *options = [[WordOptions alloc] init];
-options.enableOCR = YES;
-options.languages = @[@(OCRLanguageEnglish)];
-
-[CPDFConversion startPDFToWord:@"scanned.pdf"
-                      password:@""
-                    outputPath:@"output.docx"
-                       options:options];
-```
-
-### 6. Release Resources
+### Release Resources
 
 ```objective-c
 [LibraryManager releaseDocumentAIModel];
 [LibraryManager release];
 ```
 
-## Running the Demo
+## Conversion Examples
 
-### Mac
+### PDF to Excel
 
-```shell
-cd samples
-./RunDemo.sh
+```objective-c
+ExcelOptions *options = [[ExcelOptions alloc] init];
+options.excelWorksheetOption = ExcelWorksheetForTable;
+[CPDFConversion startPDFToExcel:@"input.pdf"
+                       password:@""
+                     outputPath:@"output.xlsx"
+                        options:options];
 ```
 
-Output files will be generated in the `samples/output_files` folder.
+### PDF to Image
 
-### iOS
-
-1. Open `samples/IOS_demo.xcodeproj` in Xcode.
-2. Connect an iOS device and select the target device.
-3. Click Build and Run.
-
-## Package Structure
-
-```
-├── doc/           # API reference and developer guide
-├── lib/           # SDK dynamic libraries / frameworks
-├── samples/       # Sample projects
-├── resource/      # DocumentAI model resources
-├── legal.txt      # Legal and copyright information
-└── release_notes.txt
+```objective-c
+ImageOptions *options = [[ImageOptions alloc] init];
+options.imageType = ImageTypePNG;
+options.imageScaling = 2.0;
+[CPDFConversion startPDFToImage:@"input.pdf"
+                       password:@""
+                     outputPath:@"output"
+                        options:options];
 ```
 
-## Key Conversion Options
+### PDF to Searchable PDF (OCR)
 
-| Option | Description | Applies To |
-| ------ | ----------- | ---------- |
-| `containImage` | Include images in output | Word, Excel, PPT, HTML, RTF, JSON, Markdown |
-| `containAnnotation` | Retain PDF annotations | Word, Excel, PPT, HTML, RTF, JSON, Markdown |
-| `pageLayoutMode` | Flow or Box layout | Word, HTML |
-| `enableOCR` | Enable OCR for scanned documents | All text-based formats |
-| `enableAILayout` | Enable AI layout analysis | All text-based formats |
-| `enableAITableRecognition` | Enable AI table recognition | All text-based formats |
-| `pageRanges` | Select specific pages (e.g. "1-3,5,7-9") | All formats |
-| `output_document_per_page` | Output one file per PDF page | All formats |
-| `fontName` | Set preferred output font | Word, Excel, PPT, Searchable PDF, OFD |
-| `formulaToImage` | Convert formulas to images | Word |
+```objective-c
+[LibraryManager setDocumentAIModel:@"path/model"];
+
+SearchablePdfOptions *options = [[SearchablePdfOptions alloc] init];
+options.enableOCR = YES;
+options.languages = @[@(OCRLanguageEnglish)];
+options.transparentText = YES;
+[CPDFConversion startPDFToSearchablePDF:@"scan.pdf"
+                               password:@""
+                             outputPath:@"output.pdf"
+                                options:options];
+```
+
+### PDF to JSON with Table Extraction
+
+```objective-c
+JsonOptions *options = [[JsonOptions alloc] init];
+options.containTable = YES;
+[CPDFConversion startPDFToJson:@"input.pdf"
+                      password:@""
+                    outputPath:@"output.json"
+                       options:options];
+```
+
+### Custom AI Engine (SDK v1.1.0+)
+
+```objective-c
+// Implement ConvertCallback protocol with custom OCR/Layout/Table handlers
+// and pass the callback object to the conversion API.
+
+WordOptions *options = [[WordOptions alloc] init];
+options.enableOCR = YES;
+options.enableAILayout = YES;
+[CPDFConversion startPDFToWord:@"input.pdf"
+                      password:@""
+                    outputPath:@"output.docx"
+                       options:options
+                      callback:customCallback];
+```
 
 ## Documentation
 
-- [Developer Guide](doc/developer_guide_objectivec.md) — Comprehensive guide covering all APIs and options.
-- [API Reference](doc/api_reference_objectivec.html) — Full API reference documentation.
+- [Developer Guide](doc/developer_guide_objectivec.md)
+- [API Reference](doc/api_reference_objectivec.html)
 
-## License
-
-PDFSolid Conversion SDK is a commercial SDK. A license is required for development and distribution. Contact [support@pdfsolid.com](mailto:support@pdfsolid.com) for licensing information.
-
-## Support
+## Contact
 
 - Website: [https://www.pdfsolid.com](https://www.pdfsolid.com/)
-- Email: [support@pdfsolid.com](mailto:support@pdfsolid.com)
+- Sales: [sales@pdfsolid.com](mailto:sales@pdfsolid.com)
+- Support: [support@pdfsolid.com](mailto:support@pdfsolid.com)
