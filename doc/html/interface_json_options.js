@@ -5,6 +5,8 @@ var interface_json_options =
     [ "ContainTable", "interface_json_options.html#a4a7c1bac245cfb2893f01a006b3b36af", null ],
     [ "enableAILayout", "interface_json_options.html#a7fcd95d46b1ebaaa803b27461bbff55f", null ],
     [ "enableAITableRecognition", "interface_json_options.html#a0e3a244ee39d369c37a433a8c5e95191", null ],
+    [ "enableDocumentDewarp", "interface_json_options.html#a72db990d507cc54b83b1baccb143f47d", null ],
+    [ "enableDocumentOrientationClassification", "interface_json_options.html#a8ca10a4926e3c5c22973e8fdb74edc1a", null ],
     [ "enableOCR", "interface_json_options.html#af690d30dbe23214523229333c37b5f1b", null ],
     [ "fontName", "interface_json_options.html#a90b4b002ae6e14cf23d0d08d8d469d5a", null ],
     [ "languages", "interface_json_options.html#a2847c68a7afc155354f8b45bc70d07b4", null ],

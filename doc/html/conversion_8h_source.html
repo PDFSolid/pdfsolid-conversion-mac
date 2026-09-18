@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDFSolid Objective-C SDK: conversion.h Source File</title>
+<title>PDFSolid Conversion Objective-C SDK (mac): conversion.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PDFSolid Objective-C SDK
+   <div id="projectname">PDFSolid Conversion Objective-C SDK (mac)<span id="projectnumber">&#160;1.2.0</span>
    </div>
-   <div id="projectbrief">API Reference Documentation for PDFSolid Objective-C SDK</div>
   </td>
  </tr>
  </tbody>
@@ -92,8 +91,8 @@ $(function(){initNavTree('conversion_8h_source.html','',''); });
   <div class="headertitle"><div class="title">conversion.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#import &quot;common.h&quot;</span></div>
+<a href="conversion_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#import &quot;<a class="code" href="common_8h.html">common.h</a>&quot;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>NS_ASSUME_NONNULL_BEGIN</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
@@ -109,8 +108,8 @@ $(function(){initNavTree('conversion_8h_source.html','',''); });
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                   password:(NSString * _Nonnull)password</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                 outputPath:(NSString * _Nonnull)outputPath</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                    options:(<a class="code hl_interface" href="interface_word_options.html">WordOptions</a> * _Nonnull)options</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                   progress:(COMProgressBlock _Nullable)progress</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                     cancel:(COMCancelBlock _Nullable)cancel;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                   progress:(<a class="code hl_typedef" href="common_8h.html#ad8b890f365eb658e4ebb75dc47dc61a3">COMProgressBlock</a> _Nullable)progress</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                     cancel:(<a class="code hl_typedef" href="common_8h.html#a9e4a4ca8e5c08c336f92cfe6a501d747">COMCancelBlock</a> _Nullable)cancel;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a28f53514cbb6fff8912624061e725f71">   35</a></span>+ (ErrorCode)startPDFToWord:(NSString * _Nonnull)filePath</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                   password:(NSString * _Nonnull)password</div>
@@ -127,8 +126,8 @@ $(function(){initNavTree('conversion_8h_source.html','',''); });
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                  password:(NSString * _Nonnull)password</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                outputPath:(NSString * _Nonnull)outputPath</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                   options:(<a class="code hl_interface" href="interface_rtf_options.html">RtfOptions</a> * _Nonnull)options</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                  progress:(COMProgressBlock _Nullable)progress</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                    cancel:(COMCancelBlock _Nullable)cancel;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                  progress:(<a class="code hl_typedef" href="common_8h.html#ad8b890f365eb658e4ebb75dc47dc61a3">COMProgressBlock</a> _Nullable)progress</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                    cancel:(<a class="code hl_typedef" href="common_8h.html#a9e4a4ca8e5c08c336f92cfe6a501d747">COMCancelBlock</a> _Nullable)cancel;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#aa1f77ff8459a1c50cdf87e99612e6b5b">   62</a></span>+ (ErrorCode)startPDFToRtf:(NSString * _Nonnull)filePath</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                  password:(NSString * _Nonnull)password</div>
@@ -145,8 +144,8 @@ $(function(){initNavTree('conversion_8h_source.html','',''); });
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                    password:(NSString * _Nonnull)password</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                  outputPath:(NSString * _Nonnull)outputPath</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                     options:(<a class="code hl_interface" href="interface_excel_options.html">ExcelOptions</a> * _Nonnull)options</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                    progress:(COMProgressBlock _Nullable)progress</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                      cancel:(COMCancelBlock _Nullable)cancel;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                    progress:(<a class="code hl_typedef" href="common_8h.html#ad8b890f365eb658e4ebb75dc47dc61a3">COMProgressBlock</a> _Nullable)progress</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                      cancel:(<a class="code hl_typedef" href="common_8h.html#a9e4a4ca8e5c08c336f92cfe6a501d747">COMCancelBlock</a> _Nullable)cancel;</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a3055b5fcb8f13051133db00947251629">   89</a></span>+ (ErrorCode)startPDFToExcel:(NSString * _Nonnull)filePath</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                    password:(NSString * _Nonnull)password</div>
@@ -163,8 +162,8 @@ $(function(){initNavTree('conversion_8h_source.html','',''); });
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                   password:(NSString * _Nonnull)password</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                 outputPath:(NSString * _Nonnull)outputPath</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                    options:(<a class="code hl_interface" href="interface_html_options.html">HtmlOptions</a> * _Nonnull)options</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                   progress:(COMProgressBlock _Nullable)progress</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                     cancel:(COMCancelBlock _Nullable)cancel;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                   progress:(<a class="code hl_typedef" href="common_8h.html#ad8b890f365eb658e4ebb75dc47dc61a3">COMProgressBlock</a> _Nullable)progress</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                     cancel:(<a class="code hl_typedef" href="common_8h.html#a9e4a4ca8e5c08c336f92cfe6a501d747">COMCancelBlock</a> _Nullable)cancel;</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a6909904d021ae7ddb8cd0e1f1835c0f6">  116</a></span>+ (ErrorCode)startPDFToHtml:(NSString * _Nonnull)filePath</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                   password:(NSString * _Nonnull)password</div>
@@ -181,8 +180,8 @@ $(function(){initNavTree('conversion_8h_source.html','',''); });
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                    password:(NSString * _Nonnull)password</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                  outputPath:(NSString * _Nonnull)outputPath</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                     options:(<a class="code hl_interface" href="interface_image_options.html">ImageOptions</a> * _Nonnull)options</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                    progress:(COMProgressBlock _Nullable)progress</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                      cancel:(COMCancelBlock _Nullable)cancel;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                    progress:(<a class="code hl_typedef" href="common_8h.html#ad8b890f365eb658e4ebb75dc47dc61a3">COMProgressBlock</a> _Nullable)progress</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                      cancel:(<a class="code hl_typedef" href="common_8h.html#a9e4a4ca8e5c08c336f92cfe6a501d747">COMCancelBlock</a> _Nullable)cancel;</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#aecddfe407a3e658d9b897eeec25a3238">  143</a></span>+ (ErrorCode)startPDFToImage:(NSString * _Nonnull)filePath</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                    password:(NSString * _Nonnull)password</div>
@@ -199,8 +198,8 @@ $(function(){initNavTree('conversion_8h_source.html','',''); });
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                   password:(NSString * _Nonnull)password</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                 outputPath:(NSString * _Nonnull)outputPath</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                    options:(<a class="code hl_interface" href="interface_txt_options.html">TxtOptions</a> * _Nonnull)options</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                   progress:(COMProgressBlock _Nullable)progress</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                     cancel:(COMCancelBlock _Nullable)cancel;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                   progress:(<a class="code hl_typedef" href="common_8h.html#ad8b890f365eb658e4ebb75dc47dc61a3">COMProgressBlock</a> _Nullable)progress</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                     cancel:(<a class="code hl_typedef" href="common_8h.html#a9e4a4ca8e5c08c336f92cfe6a501d747">COMCancelBlock</a> _Nullable)cancel;</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a199fa9f11bb31a4ad46c95b9baf7f4d4">  170</a></span>+ (ErrorCode)startPDFToTxt:(NSString * _Nonnull)filePath</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                   password:(NSString * _Nonnull)password</div>
@@ -217,8 +216,8 @@ $(function(){initNavTree('conversion_8h_source.html','',''); });
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                    password:(NSString * _Nonnull)password</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                  outputPath:(NSString * _Nonnull)outputPath</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                     options:(<a class="code hl_interface" href="interface_json_options.html">JsonOptions</a> * _Nonnull)options</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                    progress:(COMProgressBlock _Nullable)progress</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                      cancel:(COMCancelBlock _Nullable)cancel;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                    progress:(<a class="code hl_typedef" href="common_8h.html#ad8b890f365eb658e4ebb75dc47dc61a3">COMProgressBlock</a> _Nullable)progress</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                      cancel:(<a class="code hl_typedef" href="common_8h.html#a9e4a4ca8e5c08c336f92cfe6a501d747">COMCancelBlock</a> _Nullable)cancel;</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a6f2c0b4d03474087809ad8478fa52277">  197</a></span>+ (ErrorCode)startPDFToJson:(NSString * _Nonnull)filePath</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                    password:(NSString * _Nonnull)password</div>
@@ -235,8 +234,8 @@ $(function(){initNavTree('conversion_8h_source.html','',''); });
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                   password:(NSString * _Nonnull)password</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                 outputPath:(NSString * _Nonnull)outputPath</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                    options:(<a class="code hl_interface" href="interface_ppt_options.html">PptOptions</a> * _Nonnull)options</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                   progress:(COMProgressBlock _Nullable)progress</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                     cancel:(COMCancelBlock _Nullable)cancel;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                   progress:(<a class="code hl_typedef" href="common_8h.html#ad8b890f365eb658e4ebb75dc47dc61a3">COMProgressBlock</a> _Nullable)progress</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                     cancel:(<a class="code hl_typedef" href="common_8h.html#a9e4a4ca8e5c08c336f92cfe6a501d747">COMCancelBlock</a> _Nullable)cancel;</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a7c660d50c218dbb96a7bb1079b913794">  224</a></span>+ (ErrorCode)startPDFToPpt:(NSString * _Nonnull)filePath</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                   password:(NSString * _Nonnull)password</div>
@@ -253,8 +252,8 @@ $(function(){initNavTree('conversion_8h_source.html','',''); });
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                          password:(NSString * _Nonnull)password</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                        outputPath:(NSString * _Nonnull)outputPath</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                           options:(<a class="code hl_interface" href="interface_searchable_pdf_options.html">SearchablePdfOptions</a> * _Nonnull)options</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                          progress:(COMProgressBlock _Nullable)progress</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                            cancel:(COMCancelBlock _Nullable)cancel;</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                          progress:(<a class="code hl_typedef" href="common_8h.html#ad8b890f365eb658e4ebb75dc47dc61a3">COMProgressBlock</a> _Nullable)progress</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                            cancel:(<a class="code hl_typedef" href="common_8h.html#a9e4a4ca8e5c08c336f92cfe6a501d747">COMCancelBlock</a> _Nullable)cancel;</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#ac39a893a3e82e84cf06acef9e56e3c9d">  251</a></span>+ (ErrorCode)startPDFToSearchablePDF:(NSString * _Nonnull)filePath</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                          password:(NSString * _Nonnull)password</div>
@@ -271,8 +270,8 @@ $(function(){initNavTree('conversion_8h_source.html','',''); });
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                       password:(NSString * _Nonnull)password</div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                     outputPath:(NSString * _Nonnull)outputPath</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                        options:(<a class="code hl_interface" href="interface_markdown_options.html">MarkdownOptions</a> * _Nonnull)options</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                       progress:(COMProgressBlock _Nullable)progress</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                         cancel:(COMCancelBlock _Nullable)cancel;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                       progress:(<a class="code hl_typedef" href="common_8h.html#ad8b890f365eb658e4ebb75dc47dc61a3">COMProgressBlock</a> _Nullable)progress</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                         cancel:(<a class="code hl_typedef" href="common_8h.html#a9e4a4ca8e5c08c336f92cfe6a501d747">COMCancelBlock</a> _Nullable)cancel;</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#ac8b1576a685d7df2af63444aaf2e31a7">  269</a></span>+ (ErrorCode)startPDFToMarkdown:(NSString * _Nonnull)filePath</div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                       password:(NSString * _Nonnull)password</div>
@@ -289,8 +288,8 @@ $(function(){initNavTree('conversion_8h_source.html','',''); });
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                   password:(NSString * _Nonnull)password</div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                 outputPath:(NSString * _Nonnull)outputPath</div>
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                    options:(<a class="code hl_interface" href="interface_ofd_options.html">OfdOptions</a> * _Nonnull)options</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                   progress:(COMProgressBlock _Nullable)progress</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                     cancel:(COMCancelBlock _Nullable)cancel;</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                   progress:(<a class="code hl_typedef" href="common_8h.html#ad8b890f365eb658e4ebb75dc47dc61a3">COMProgressBlock</a> _Nullable)progress</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                     cancel:(<a class="code hl_typedef" href="common_8h.html#a9e4a4ca8e5c08c336f92cfe6a501d747">COMCancelBlock</a> _Nullable)cancel;</div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno"><a class="line" href="interface_c_p_d_f_conversion.html#a95f9641aff97466c2a63e43ef625b1c9">  295</a></span>+ (ErrorCode)startPDFToOFD:(NSString * _Nonnull)filePath</div>
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                   password:(NSString * _Nonnull)password</div>
@@ -301,25 +300,28 @@ $(function(){initNavTree('conversion_8h_source.html','',''); });
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="keyword">@end</span></div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>NS_ASSUME_NONNULL_END</div>
+<div class="ttc" id="acommon_8h_html"><div class="ttname"><a href="common_8h.html">common.h</a></div></div>
+<div class="ttc" id="acommon_8h_html_a9e4a4ca8e5c08c336f92cfe6a501d747"><div class="ttname"><a href="common_8h.html#a9e4a4ca8e5c08c336f92cfe6a501d747">COMCancelBlock</a></div><div class="ttdeci">BOOL(^ COMCancelBlock)(void)</div><div class="ttdef"><b>Definition</b> <a href="common_8h_source.html#l00010">common.h:10</a></div></div>
+<div class="ttc" id="acommon_8h_html_ad8b890f365eb658e4ebb75dc47dc61a3"><div class="ttname"><a href="common_8h.html#ad8b890f365eb658e4ebb75dc47dc61a3">COMProgressBlock</a></div><div class="ttdeci">void(^ COMProgressBlock)(int current_page, int total_page)</div><div class="ttdef"><b>Definition</b> <a href="common_8h_source.html#l00006">common.h:6</a></div></div>
 <div class="ttc" id="ainterface_c_p_d_f_conversion_html"><div class="ttname"><a href="interface_c_p_d_f_conversion.html">CPDFConversion</a></div><div class="ttdoc">Provides functionalities to convert PDF files into various formats such as Word, Excel,...</div><div class="ttdef"><b>Definition</b> <a href="#l00011">conversion.h:12</a></div></div>
-<div class="ttc" id="ainterface_excel_options_html"><div class="ttname"><a href="interface_excel_options.html">ExcelOptions</a></div><div class="ttdoc">PDF to Excel conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00348">base_type.h:349</a></div></div>
-<div class="ttc" id="ainterface_html_options_html"><div class="ttname"><a href="interface_html_options.html">HtmlOptions</a></div><div class="ttdoc">PDF to Html conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00442">base_type.h:443</a></div></div>
-<div class="ttc" id="ainterface_image_options_html"><div class="ttname"><a href="interface_image_options.html">ImageOptions</a></div><div class="ttdoc">PDF to Image conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00530">base_type.h:531</a></div></div>
-<div class="ttc" id="ainterface_json_options_html"><div class="ttname"><a href="interface_json_options.html">JsonOptions</a></div><div class="ttdoc">PDF to Json conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00582">base_type.h:583</a></div></div>
-<div class="ttc" id="ainterface_markdown_options_html"><div class="ttname"><a href="interface_markdown_options.html">MarkdownOptions</a></div><div class="ttdoc">PDF to Markdown conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00690">base_type.h:691</a></div></div>
-<div class="ttc" id="ainterface_ofd_options_html"><div class="ttname"><a href="interface_ofd_options.html">OfdOptions</a></div><div class="ttdoc">PDF to OFD conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00655">base_type.h:656</a></div></div>
-<div class="ttc" id="ainterface_ppt_options_html"><div class="ttname"><a href="interface_ppt_options.html">PptOptions</a></div><div class="ttdoc">PDF to PPT conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00401">base_type.h:402</a></div></div>
-<div class="ttc" id="ainterface_rtf_options_html"><div class="ttname"><a href="interface_rtf_options.html">RtfOptions</a></div><div class="ttdoc">PDF to RTF conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00489">base_type.h:490</a></div></div>
-<div class="ttc" id="ainterface_searchable_pdf_options_html"><div class="ttname"><a href="interface_searchable_pdf_options.html">SearchablePdfOptions</a></div><div class="ttdoc">PDF to SearchablePdf conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00620">base_type.h:621</a></div></div>
-<div class="ttc" id="ainterface_txt_options_html"><div class="ttname"><a href="interface_txt_options.html">TxtOptions</a></div><div class="ttdoc">PDF to TXT conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00550">base_type.h:551</a></div></div>
-<div class="ttc" id="ainterface_word_options_html"><div class="ttname"><a href="interface_word_options.html">WordOptions</a></div><div class="ttdoc">PDF to Word conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00304">base_type.h:305</a></div></div>
+<div class="ttc" id="ainterface_excel_options_html"><div class="ttname"><a href="interface_excel_options.html">ExcelOptions</a></div><div class="ttdoc">PDF to Excel conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00363">base_type.h:364</a></div></div>
+<div class="ttc" id="ainterface_html_options_html"><div class="ttname"><a href="interface_html_options.html">HtmlOptions</a></div><div class="ttdoc">PDF to Html conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00469">base_type.h:470</a></div></div>
+<div class="ttc" id="ainterface_image_options_html"><div class="ttname"><a href="interface_image_options.html">ImageOptions</a></div><div class="ttdoc">PDF to Image conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00569">base_type.h:570</a></div></div>
+<div class="ttc" id="ainterface_json_options_html"><div class="ttname"><a href="interface_json_options.html">JsonOptions</a></div><div class="ttdoc">PDF to Json conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00633">base_type.h:634</a></div></div>
+<div class="ttc" id="ainterface_markdown_options_html"><div class="ttname"><a href="interface_markdown_options.html">MarkdownOptions</a></div><div class="ttdoc">PDF to Markdown conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00759">base_type.h:760</a></div></div>
+<div class="ttc" id="ainterface_ofd_options_html"><div class="ttname"><a href="interface_ofd_options.html">OfdOptions</a></div><div class="ttdoc">PDF to OFD conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00718">base_type.h:719</a></div></div>
+<div class="ttc" id="ainterface_ppt_options_html"><div class="ttname"><a href="interface_ppt_options.html">PptOptions</a></div><div class="ttdoc">PDF to PPT conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00422">base_type.h:423</a></div></div>
+<div class="ttc" id="ainterface_rtf_options_html"><div class="ttname"><a href="interface_rtf_options.html">RtfOptions</a></div><div class="ttdoc">PDF to RTF conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00522">base_type.h:523</a></div></div>
+<div class="ttc" id="ainterface_searchable_pdf_options_html"><div class="ttname"><a href="interface_searchable_pdf_options.html">SearchablePdfOptions</a></div><div class="ttdoc">PDF to SearchablePdf conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00677">base_type.h:678</a></div></div>
+<div class="ttc" id="ainterface_txt_options_html"><div class="ttname"><a href="interface_txt_options.html">TxtOptions</a></div><div class="ttdoc">PDF to TXT conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00595">base_type.h:596</a></div></div>
+<div class="ttc" id="ainterface_word_options_html"><div class="ttname"><a href="interface_word_options.html">WordOptions</a></div><div class="ttdoc">PDF to Word conversion parameter object.</div><div class="ttdef"><b>Definition</b> <a href="base__type_8h_source.html#l00313">base_type.h:314</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_dbce44ccc2db0b41b93f36ea3be95e45.html">wrapper-dylib</a></li><li class="navelem"><a href="dir_c703cc628be7f3050e343e133bb7c960.html">include</a></li><li class="navelem"><b>conversion.h</b></li>
+    <li class="navelem"><a href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a href="dir_18e598be08847b6f5fc9c2b2d3601e09.html">PDFSolid.framework</a></li><li class="navelem"><a href="dir_6e9ca69701247e37e2d7f0e1db2ecf51.html">Versions</a></li><li class="navelem"><a href="dir_9df72bdb2158e2ca39a1cd271b95e273.html">A</a></li><li class="navelem"><a href="dir_53d8ece532d8afa6fa97dbfed5e4689f.html">Headers</a></li><li class="navelem"><a href="conversion_8h.html">conversion.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>

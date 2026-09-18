@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDFSolid Objective-C SDK: PDFSolid documentation</title>
+<title>PDFSolid Conversion Objective-C SDK (mac): PDFSolid Conversion SDK 1.2.0 for macOS</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PDFSolid Objective-C SDK
+   <div id="projectname">PDFSolid Conversion Objective-C SDK (mac)<span id="projectnumber">&#160;1.2.0</span>
    </div>
-   <div id="projectbrief">API Reference Documentation for PDFSolid Objective-C SDK</div>
   </td>
  </tr>
  </tbody>
@@ -89,55 +88,54 @@ $(function(){initNavTree('index.html','',''); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">PDFSolid documentation </div></div>
+  <div class="headertitle"><div class="title">PDFSolid Conversion SDK 1.2.0 for macOS </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_mainpage"></a></p>
-<p>PDFSolid Conversion SDK is a high-performance library designed for extracting and transforming the data within your PDF files, such as text, images, tables, links, and annotations, into various file formats. Our Conversion SDK retains the original document layout and the properties of the file data, ensuring a seamless document conversion experience.</p>
-<p>Effortlessly integrate the PDFSolid Conversion SDK into your projects in just a few steps, and enable the following file format conversions:</p>
-<ul>
-<li>Convert PDF to Word (.docx)</li>
-<li>Convert PDF to Excel (.xlsx)</li>
-<li>Convert PDF to PowerPoint (.pptx)</li>
-<li>Convert PDF to HTML (.html)</li>
-<li>Convert PDF to CSV (.csv)</li>
-<li>Convert PDF to Image (.png, .jpg, .jpeg, .jpeg2000, .bmp, .tiff, .tga, .gif, .webp)</li>
-<li>Convert PDF to Plain Text (.txt)</li>
-<li>Convert PDF to Rich Text Format (.rtf)</li>
-<li>Convert PDF to Searchable PDF (.pdf)</li>
-<li>Convert PDF to OFD (.ofd)</li>
-<li>Convert PDF to Structured Data (.json)</li>
-<li>Convert PDF to Markdown (.md)</li>
-</ul>
-<p>Harness the power of PDFSolid Conversion SDK and take your document processing to the next level with intelligent tools designed for accuracy and efficiency. To enhance your format conversion results, PDFSolid offers AI-powered document tools with the following capabilities:</p>
-<ul>
-<li>Optical Character Recognition (OCR)</li>
-<li>Layout Analysis</li>
-<li>Table Recognition</li>
-</ul>
+<div class="textblock"><p><a class="anchor" id="md_doc_2developer__guide__objectivec"></a></p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
-Why PDFSolid Conversion SDK</h1>
+Requirements</h1>
 <ul>
-<li><p class="startli">Mature Technology</p>
-<p class="startli">With years of technology accumulation, we have established a complete mechanism of product iteration to offer a continuous guarantee for product competitiveness.</p>
-</li>
-<li><p class="startli">Complete PDF and Format Conversion Functionalities</p>
-<p class="startli">Our comprehensive features can meet diverse needs and are easy for our customers to use without training costs.</p>
-</li>
-<li><p class="startli">High-quality Service</p>
-<p class="startli">Professional service and technical support help us quickly respond to users' feedback through onsite service or remote support such as telephone and email.</p>
-</li>
-<li><p class="startli">Independent Intellectual Property Rights</p>
-<p class="startli">Our technology is independent and compliant with ISO, helping enterprises conduct international business without considering copyright risks.</p>
-</li>
+<li>Apple Silicon or Intel running macOS 11.0+, required by bundled AI libraries.</li>
+<li>Xcode command line tools and CMake 3.20+ for the command-line example.</li>
+<li>A valid PDFSolid license. The supplied license is in <span class="tt">resource/license/license.xml</span>; online verification requires network access.</li>
 </ul>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
-PDFSolid Conversion SDK</h1>
-<p>The PDFSolid Conversion SDK is designed to facilitate the effortless conversion of PDF files into various other formats, all while preserving the original layout and formatting of the documents. In this guide, we will explore the PDFSolid Conversion SDK and demonstrate how to use it within your Objective-C projects.</p>
+Package Layout</h1>
+<ul>
+<li><span class="tt">lib/PDFSolid.framework</span>: Objective-C API, universal arm64/x86_64.</li>
+<li><span class="tt">lib/*.dylib</span>: native PDFSolid, DocumentAI, OpenCV and ONNX Runtime.</li>
+<li><span class="tt">resource/models/documentai.model</span>: model required by the macOS sample.</li>
+<li><span class="tt">samples/demo</span>: runnable PDF-to-Word command-line example.</li>
+<li><span class="tt">doc/html/index.html</span>: API reference generated from this framework's headers.</li>
+</ul>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
-License &amp; Trial</h1>
-<p>The PDFSolid Conversion SDK is a commercial SDK that requires a license to grant developers the right to develop and distribute their applications. In development mode, each license is only valid for one device ID. ComPDF provides flexible licensing models, please contact <a href="#" onclick="location.href='mai'+'lto:'+'sup'+'po'+'rt@'+'co'+'mpd'+'f.'+'com'; return false;">our marketing team</a> for more information. However, even if you have a license, it is prohibited to distribute any documents, sample code, or source code of the PDFSolid Conversion SDK to any third parties.</p>
-<p>If you do not have a License, please feel free to contact the <a href="https://www.compdf.com/contact-sales">PDFSolid Team</a> to obtain a License to try the PDFSolid Conversion SDK. </p>
+Run the Example</h1>
+<p>From the package root:</p>
+<div class="fragment"><div class="line">bash samples/demo/RunDemo.sh</div>
+</div><!-- fragment --><p>The example verifies SDK version 1.2.0, validates the license, initializes the resource directory, loads the model and converts <span class="tt">samples/input_files/word.pdf</span>. It reports license, model and conversion results separately. A failed license or model load stops conversion. Each run creates a new DOCX in <span class="tt">samples/output_files</span>.</p>
+<p>For explicit paths:</p>
+<div class="fragment"><div class="line">bash samples/demo/RunDemo.sh /path/license.xml /path/resource /path/input.pdf /path/new-output.docx</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+Integrate</h1>
+<p>Import <span class="tt">&lt;PDFSolid/PDFSolid.h&gt;</span> and link <span class="tt">PDFSolid.framework</span>, Foundation and AppKit. Keep all four dylibs together beside the framework. For an application bundle, copy the framework and dylibs into <span class="tt">Contents/Frameworks</span>, add <span class="tt">@executable_path/../Frameworks</span> to the application's runpath search paths, and sign embedded code with your application's identity after copying.</p>
+<p>The framework module is <span class="tt">PDFSolid</span>. The public classes retain the names <span class="tt">LibraryManager</span>, <span class="tt">CPDFConversion</span>, <span class="tt">WordOptions</span>, <span class="tt">ExcelOptions</span> and other format-specific option classes. Renaming the product does not rename these APIs.</p>
+<div class="fragment"><div class="line">#import &lt;PDFSolid/PDFSolid.h&gt;</div>
+<div class="line"> </div>
+<div class="line">ErrorCode code = [LibraryManager licenseVerify:licensePath];</div>
+<div class="line">if (code == ErrorCodeSuccess) {</div>
+<div class="line">    [LibraryManager initialize:resourcePath];</div>
+<div class="line">    code = [LibraryManager setDocumentAIModel:modelPath gpuId:-1];</div>
+<div class="line">    if (code == ErrorCodeSuccess) {</div>
+<div class="line">        WordOptions *options = [[WordOptions alloc] init];</div>
+<div class="line">        code = [CPDFConversion startPDFToWord:inputPath password:@&quot;&quot;</div>
+<div class="line">                                 outputPath:outputPath options:options];</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line">[LibraryManager release];</div>
+</div><!-- fragment --><p>Use the API reference for format-specific options, OCR, page ranges, orientation correction and dewarping. Do not overwrite an input document with output. Library release must run after conversion work has completed.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+Distribution Notes</h1>
+<p>The binaries carry local ad-hoc signatures, not Developer ID notarization. Sign and notarize your own application as required by your distribution channel. iOS is supplied in a separate package; do not use these macOS binaries on iOS. </p>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->

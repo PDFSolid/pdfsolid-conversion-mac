@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['rect_0',['rect',['../interface_layout_analysis_result.html#a9e5712f030dca1c275fec90f97aa4125',1,'LayoutAnalysisResult::rect'],['../interface_stamp_detection_result.html#af333c8c8e3a9e79c577a1dd66b39ffab',1,'StampDetectionResult::rect'],['../interface_c_t_a_b_result.html#a4d00ac9bf405c73e319b5d1d2ddc362d',1,'CTABResult::rect'],['../interface_c_o_c_r_result.html#ae58cf1156ada64de98d398846e0e7893',1,'COCRResult::rect']]],
-  ['release_1',['release',['../interface_library_manager.html#aa6e0e3c7743151b6a9a2773772aabdc6',1,'LibraryManager']]],
-  ['releasedocumentaimodel_2',['releaseDocumentAIModel',['../interface_library_manager.html#a6f61ed513e8f833c44c7b11f069acec3',1,'LibraryManager']]],
-  ['right_3',['right',['../interface_c_rect.html#a0c372df8a57e1f0e353b094b1ba69c3e',1,'CRect']]],
-  ['rowcount_4',['rowCount',['../interface_c_t_a_b_result.html#af7fd4d1a11c776a96137ba15b692e3a5',1,'CTABResult']]],
-  ['rtfoptions_5',['RtfOptions',['../interface_rtf_options.html',1,'']]]
+  ['notes_0',['Distribution Notes',['../index.html#autotoc_md5',1,'']]],
+  ['ns_5fenum_1',['NS_ENUM',['../base__type_8h.html#a476b92d973eb54e4a672411851358cd2',1,'NS_ENUM(NSInteger, OCRLanguage):&#160;base_type.h'],['../base__type_8h.html#a35c73caa4a8cfa0d1671a03e0df4eb42',1,'NS_ENUM(NSInteger, ErrorCode):&#160;base_type.h'],['../base__type_8h.html#a7fb9ee80d24678fa4e243ef2e1b69497',1,'NS_ENUM(NSInteger, PageLayoutMode):&#160;base_type.h'],['../base__type_8h.html#a052534ec9c16aadaf126b48d66391d9e',1,'NS_ENUM(NSInteger, ImageColorMode):&#160;base_type.h'],['../base__type_8h.html#aa8b7a0ae888dd8a3718a9636d58ad4a8',1,'NS_ENUM(NSInteger, ImageType):&#160;base_type.h'],['../base__type_8h.html#a1525f457ff199c7392200af9ad6da7b0',1,'NS_ENUM(NSInteger, ExcelWorksheetOption):&#160;base_type.h'],['../base__type_8h.html#aac64e903cbfa3af2bff7b53edd388feb',1,'NS_ENUM(NSInteger, htmlPageOption):&#160;base_type.h'],['../base__type_8h.html#ac0e271f13cce464831a0b18a3d96bba1',1,'NS_ENUM(NSInteger, OCROption):&#160;base_type.h']]],
+  ['num_2',['num',['../interface_c_t_a_b_result.html#ae4bdbc16d86160e4ad8cfa6ebf5ade4c',1,'CTABResult']]]
 ];

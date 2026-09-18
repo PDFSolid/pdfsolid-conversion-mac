@@ -24,8 +24,8 @@
 */
 var NAVTREE =
 [
-  [ "PDFSolid Objective-C SDK", "index.html", [
-    [ "PDFSolid documentation", "index.html", "index" ],
+  [ "PDFSolid Conversion Objective-C SDK (mac)", "index.html", [
+    [ "PDFSolid Conversion SDK 1.2.0 for macOS", "index.html", "index" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -33,7 +33,15 @@ var NAVTREE =
       [ "Data Fields", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
-        [ "Properties", "functions_prop.html", null ]
+        [ "Properties", "functions_prop.html", "functions_prop" ]
+      ] ]
+    ] ],
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ],
+      [ "Globals", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ],
+        [ "Typedefs", "globals_type.html", null ]
       ] ]
     ] ]
   ] ]
@@ -41,8 +49,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"interface_ppt_options.html#aa5b97fcccf9b955dba10ecc1e332f201"
+"_p_d_f_solid_8h.html",
+"interface_ofd_options.html#af5d3949372d99058f4249e3119eb4b64"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

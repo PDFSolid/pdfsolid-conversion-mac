@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDFSolid Objective-C SDK: ConvertOptions Class Reference</title>
+<title>PDFSolid Conversion Objective-C SDK (mac): ConvertOptions Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PDFSolid Objective-C SDK
+   <div id="projectname">PDFSolid Conversion Objective-C SDK (mac)<span id="projectnumber">&#160;1.2.0</span>
    </div>
-   <div id="projectbrief">API Reference Documentation for PDFSolid Objective-C SDK</div>
   </td>
  </tr>
  </tbody>
@@ -156,11 +155,15 @@ Properties</h2></td></tr>
 <tr class="memdesc:a47421490fc997ee3c7ea93e1fd9ef5fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify the font name to convert, e.g. "Arial".  <br /></td></tr>
 <tr class="memitem:a3ccba4b1c8824d36bbb3adb0db876bc4" id="r_a3ccba4b1c8824d36bbb3adb0db876bc4"><td class="memItemLeft" align="right" valign="top">NSArray&lt; NSNumber * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ccba4b1c8824d36bbb3adb0db876bc4">languages</a></td></tr>
 <tr class="memdesc:a3ccba4b1c8824d36bbb3adb0db876bc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].  <br /></td></tr>
+<tr class="memitem:a683a5b91a34375f856fc4cf694aa2e59" id="r_a683a5b91a34375f856fc4cf694aa2e59"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a683a5b91a34375f856fc4cf694aa2e59">enableDocumentOrientationClassification</a></td></tr>
+<tr class="memdesc:a683a5b91a34375f856fc4cf694aa2e59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to classify and correct document orientation before OCR image recognition.  <br /></td></tr>
+<tr class="memitem:affe5d607dc972d080d0c2af204110405" id="r_affe5d607dc972d080d0c2af204110405"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affe5d607dc972d080d0c2af204110405">enableDocumentDewarp</a></td></tr>
+<tr class="memdesc:affe5d607dc972d080d0c2af204110405"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to apply DocumentAI dewarp before OCR image recognition.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Convert options. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00224">224</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00227">227</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 </div><a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Property Documentation</h2>
 <a id="ad8a228983f70994827ad2b74c1aea118" name="ad8a228983f70994827ad2b74c1aea118"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad8a228983f70994827ad2b74c1aea118">&#9670;&#160;</a></span>auto_create_folder</h2>
@@ -184,7 +187,7 @@ Properties</h2></td></tr>
 
 <p>Whether to automatically create folder when exporting multiple documents. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00272">272</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00275">275</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -210,7 +213,7 @@ Properties</h2></td></tr>
 
 <p>Whether to contain page background images when converting,which takes effect only when enable_ocr is true. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00236">236</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00239">239</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -236,7 +239,7 @@ Properties</h2></td></tr>
 
 <p>Whether to include annotations. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00242">242</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00245">245</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -262,7 +265,7 @@ Properties</h2></td></tr>
 
 <p>Whether to include images (only effective when OCR is disabled) </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00233">233</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00236">236</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -288,7 +291,7 @@ Properties</h2></td></tr>
 
 <p>Whether to remove AI content during conversion. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00227">227</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00230">230</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -314,7 +317,59 @@ Properties</h2></td></tr>
 
 <p>Whether to enable AI table recognition during conversion. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00230">230</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00233">233</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+
+</div>
+</div>
+<a id="affe5d607dc972d080d0c2af204110405" name="affe5d607dc972d080d0c2af204110405"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affe5d607dc972d080d0c2af204110405">&#9670;&#160;</a></span>enableDocumentDewarp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) enableDocumentDewarp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel read">read</span><span class="mlabel write">write</span><span class="mlabel nonatomic">nonatomic</span><span class="mlabel assign">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether to apply DocumentAI dewarp before OCR image recognition. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00308">308</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+
+</div>
+</div>
+<a id="a683a5b91a34375f856fc4cf694aa2e59" name="a683a5b91a34375f856fc4cf694aa2e59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a683a5b91a34375f856fc4cf694aa2e59">&#9670;&#160;</a></span>enableDocumentOrientationClassification</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) enableDocumentOrientationClassification</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel read">read</span><span class="mlabel write">write</span><span class="mlabel nonatomic">nonatomic</span><span class="mlabel assign">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether to classify and correct document orientation before OCR image recognition. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00305">305</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -340,7 +395,7 @@ Properties</h2></td></tr>
 
 <p>Whether to enable OCR. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00254">254</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00257">257</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -366,7 +421,7 @@ Properties</h2></td></tr>
 
 <p>Whether to export all content to Excel. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00245">245</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00248">248</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -392,7 +447,7 @@ Properties</h2></td></tr>
 
 <p>Whether to save as CSV format. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00251">251</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00254">254</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -418,7 +473,7 @@ Properties</h2></td></tr>
 
 <p>Whether each worksheet contains only one table. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00248">248</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00251">251</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -444,7 +499,7 @@ Properties</h2></td></tr>
 
 <p>Specify the font name to convert, e.g. "Arial". </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00296">296</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00299">299</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -470,7 +525,7 @@ Properties</h2></td></tr>
 
 <p>Convert formulas to images. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00269">269</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00272">272</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -496,7 +551,7 @@ Properties</h2></td></tr>
 
 <p>Specify the Html page option. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00281">281</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00284">284</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -522,7 +577,7 @@ Properties</h2></td></tr>
 
 <p>Image color mode. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00287">287</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00290">290</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -548,7 +603,7 @@ Properties</h2></td></tr>
 
 <p>Whether to enhance image paths. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00263">263</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00266">266</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -574,7 +629,7 @@ Properties</h2></td></tr>
 
 <p>Image scaling ratio. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00266">266</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00269">269</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -600,7 +655,7 @@ Properties</h2></td></tr>
 
 <p>Image file type. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00290">290</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00293">293</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -626,7 +681,7 @@ Properties</h2></td></tr>
 
 <p>Whether to include tables when converting to JSON. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00239">239</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00242">242</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -652,7 +707,7 @@ Properties</h2></td></tr>
 
 <p>OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)]. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00299">299</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00302">302</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -678,7 +733,7 @@ Properties</h2></td></tr>
 
 <p>OCR option scope. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00278">278</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00281">281</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -704,7 +759,7 @@ Properties</h2></td></tr>
 
 <p>whether to output one document per page. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00275">275</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00278">278</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -730,7 +785,7 @@ Properties</h2></td></tr>
 
 <p>Page layout mode. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00284">284</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00287">287</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -756,7 +811,7 @@ Properties</h2></td></tr>
 
 <p>Page ranges for conversion (e.g. "1-3,5,7-9") </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00293">293</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00296">296</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -782,7 +837,7 @@ Properties</h2></td></tr>
 
 <p>Whether to make the text transparent in the output document. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00257">257</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00260">260</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -808,7 +863,7 @@ Properties</h2></td></tr>
 
 <p>Whether to format tables when converting to TXT. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00260">260</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00263">263</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>

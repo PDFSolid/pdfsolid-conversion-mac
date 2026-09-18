@@ -2,6 +2,8 @@ var interface_searchable_pdf_options =
 [
     [ "contain_page_background_image", "interface_searchable_pdf_options.html#a2331f52d8e439694c0be0eb62592f99e", null ],
     [ "containImage", "interface_searchable_pdf_options.html#a831085f793c5ab7e4287ffca0c507425", null ],
+    [ "enableDocumentDewarp", "interface_searchable_pdf_options.html#a9f7d687fc448cdcc91e58395fef0beb3", null ],
+    [ "enableDocumentOrientationClassification", "interface_searchable_pdf_options.html#a15f8a5291241b3f8f0ff802fdf336997", null ],
     [ "enableOCR", "interface_searchable_pdf_options.html#aa85a96a46c133e54aa6489834fdd9229", null ],
     [ "fontName", "interface_searchable_pdf_options.html#a81420a4a30893af462c1b793aa1225e1", null ],
     [ "formulaToImage", "interface_searchable_pdf_options.html#a7dc526fd336f781a5566d44ff2cbdc92", null ],

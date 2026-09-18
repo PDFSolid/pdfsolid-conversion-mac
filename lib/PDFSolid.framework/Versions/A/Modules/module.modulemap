@@ -1,6 +1,5 @@
 framework module PDFSolid {
   umbrella header "PDFSolid.h"
-  
   export *
   module * { export * }
 }

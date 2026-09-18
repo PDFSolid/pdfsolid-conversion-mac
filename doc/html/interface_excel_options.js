@@ -7,6 +7,8 @@ var interface_excel_options =
     [ "CSVFormat", "interface_excel_options.html#aa195419fd51b2a37d891501bc09d339c", null ],
     [ "enableAILayout", "interface_excel_options.html#af390f1f583f7be1c8bdab767bf00bda1", null ],
     [ "enableAITableRecognition", "interface_excel_options.html#a55d5b2e6f4a49afbd3169dba0e3d0182", null ],
+    [ "enableDocumentDewarp", "interface_excel_options.html#a4cfa8ace7960ffe9222019e68d160df5", null ],
+    [ "enableDocumentOrientationClassification", "interface_excel_options.html#a1f3e522e18228a7b33a96007543bb0ef", null ],
     [ "enableOCR", "interface_excel_options.html#afc662de24471d30bff59d2428c12acbf", null ],
     [ "excelWorksheetOption", "interface_excel_options.html#ac538aad516e6b5736f56a7cabd43c6b0", null ],
     [ "fontName", "interface_excel_options.html#ae1634ce83c7c3b3ad80101a59f9d34ac", null ],

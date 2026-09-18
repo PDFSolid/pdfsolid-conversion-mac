@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['license_20trial_0',['License &amp;amp; Trial',['../index.html#autotoc_md3',1,'']]]
+  ['2_200_20for_20macos_0',['PDFSolid Conversion SDK 1.2.0 for macOS',['../index.html',1,'']]]
 ];

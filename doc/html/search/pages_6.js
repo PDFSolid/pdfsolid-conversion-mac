@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['why_20pdfsolid_20conversion_20sdk_0',['Why PDFSolid Conversion SDK',['../index.html#autotoc_md1',1,'']]]
+  ['for_20macos_0',['PDFSolid Conversion SDK 1.2.0 for macOS',['../index.html',1,'']]]
 ];

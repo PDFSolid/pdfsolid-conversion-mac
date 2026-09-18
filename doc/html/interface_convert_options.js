@@ -6,6 +6,8 @@ var interface_convert_options =
     [ "containImage", "interface_convert_options.html#a4a084804fbf94886d5c60c9d52a60edd", null ],
     [ "enableAILayout", "interface_convert_options.html#adc86ec625d62e966c09a4163bb27b779", null ],
     [ "enableAITableRecognition", "interface_convert_options.html#a361304258466a6e3392c5b6fa28234ed", null ],
+    [ "enableDocumentDewarp", "interface_convert_options.html#affe5d607dc972d080d0c2af204110405", null ],
+    [ "enableDocumentOrientationClassification", "interface_convert_options.html#a683a5b91a34375f856fc4cf694aa2e59", null ],
     [ "enableOCR", "interface_convert_options.html#a7a9cfaab329e9d4f2bf4f73adec34b53", null ],
     [ "excelAllContent", "interface_convert_options.html#a874e9b900ba2ad9e4f897754b0ea110d", null ],
     [ "excelCSVFormat", "interface_convert_options.html#a063a226bebe730fb49e6b734a615e6c4", null ],

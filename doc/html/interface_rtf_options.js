@@ -5,6 +5,8 @@ var interface_rtf_options =
     [ "containImage", "interface_rtf_options.html#a4a7f15eced14f41ea3820bd3a24d971e", null ],
     [ "enableAILayout", "interface_rtf_options.html#ae98139556346673114c8850839b8b13d", null ],
     [ "enableAITableRecognition", "interface_rtf_options.html#a2baff8f3edd9a9f6b86d6bbd223ec157", null ],
+    [ "enableDocumentDewarp", "interface_rtf_options.html#ac0ece2b86ab18d75d294363669726fa3", null ],
+    [ "enableDocumentOrientationClassification", "interface_rtf_options.html#a935b4b425c8b33da4af74a3c268bba25", null ],
     [ "enableOCR", "interface_rtf_options.html#a78251ee619e277261f796a2f45448921", null ],
     [ "fontName", "interface_rtf_options.html#a092533cd834f86ef93aa50d468e5bc6c", null ],
     [ "formulaToImage", "interface_rtf_options.html#abf79f466e8c9f275540906fa0dbfd176", null ],

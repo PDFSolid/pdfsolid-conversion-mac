@@ -5,6 +5,8 @@ var interface_ppt_options =
     [ "containImage", "interface_ppt_options.html#a5540541410091799569cdb1cead01f43", null ],
     [ "enableAILayout", "interface_ppt_options.html#a21fd5a3a87b7f2ae9ab32194784f5e21", null ],
     [ "enableAITableRecognition", "interface_ppt_options.html#a5680aa97d6088f435a78391e94ada32e", null ],
+    [ "enableDocumentDewarp", "interface_ppt_options.html#a67705de65b26e4748dbea2fbfb168276", null ],
+    [ "enableDocumentOrientationClassification", "interface_ppt_options.html#af069f18086504bb017b8fbee278d2196", null ],
     [ "enableOCR", "interface_ppt_options.html#a015f849adb741cc84f6612ecc450a489", null ],
     [ "fontName", "interface_ppt_options.html#a87db6b013c323bfc13d4a4e750c40b02", null ],
     [ "formulaToImage", "interface_ppt_options.html#ab0babac4b91cbe318290307f27657826", null ],

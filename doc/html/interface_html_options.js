@@ -5,6 +5,8 @@ var interface_html_options =
     [ "containImage", "interface_html_options.html#a94b07321a2d14bcf11e907e3a478dae3", null ],
     [ "enableAILayout", "interface_html_options.html#a049a27f9053084b91f080d85ee27a245", null ],
     [ "enableAITableRecognition", "interface_html_options.html#aace685976e19de086406a86076da6734", null ],
+    [ "enableDocumentDewarp", "interface_html_options.html#a82a743033b0c05d2113be430ee15a874", null ],
+    [ "enableDocumentOrientationClassification", "interface_html_options.html#a8acaa18aa61a1041c5c3f2da059e7062", null ],
     [ "enableOCR", "interface_html_options.html#ac57915b79266a8e6b3a38f6e5841f1f0", null ],
     [ "fontName", "interface_html_options.html#aa48cd87c6bfb558f36733f6587d9d91b", null ],
     [ "formulaToImage", "interface_html_options.html#ace6be894442af6f4d1ae17dc17151a8e", null ],

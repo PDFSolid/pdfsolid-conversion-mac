@@ -2,6 +2,8 @@ var interface_ofd_options =
 [
     [ "contain_page_background_image", "interface_ofd_options.html#a8ebcae8c4a0b77c5f220feae2fff1460", null ],
     [ "containImage", "interface_ofd_options.html#a3b17899c14fc0e73f86a53a7322c732f", null ],
+    [ "enableDocumentDewarp", "interface_ofd_options.html#a3cd007013ad9481b16b9b06c69cf59a6", null ],
+    [ "enableDocumentOrientationClassification", "interface_ofd_options.html#a0961677ac421817c38b5c61b147a5b18", null ],
     [ "enableOCR", "interface_ofd_options.html#a3a1dbf80663ebbee49d4d4b84f5c4553", null ],
     [ "fontName", "interface_ofd_options.html#af91b3fafd80f53e76e07de283f9c2063", null ],
     [ "formulaToImage", "interface_ofd_options.html#af5d3949372d99058f4249e3119eb4b64", null ],

@@ -142,6 +142,9 @@ typedef NS_ENUM(NSInteger, ErrorCode) {
     /// The table data is invalid or null.
     ErrorCodeInvalidTable = 94,
 
+    /// The requested feature is not supported by this build.
+    ErrorCodeUnsupportedFeature = 95,
+
     /// Unknown error
     ErrorCodeUnknown = 100
 };
@@ -298,6 +301,12 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
 @property (nonatomic, copy) NSArray<NSNumber *> *languages;
 
+/// Whether to classify and correct document orientation before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
+
+/// Whether to apply DocumentAI dewarp before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentDewarp;
+
 @end
 
 /// \brief PDF to Word conversion parameter object.
@@ -341,6 +350,12 @@ typedef NS_ENUM(NSInteger, OCROption) {
 
 /// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
 @property (nonatomic, copy) NSArray<NSNumber *> *languages;
+
+/// Whether to classify and correct document orientation before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
+
+/// Whether to apply DocumentAI dewarp before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentDewarp;
 
 @end
 
@@ -395,6 +410,12 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// Whether each worksheet contains only one table
 @property (nonatomic, assign) ExcelWorksheetOption excelWorksheetOption;
 
+/// Whether to classify and correct document orientation before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
+
+/// Whether to apply DocumentAI dewarp before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentDewarp;
+
 @end
 
 /// \brief PDF to PPT conversion parameter object.
@@ -435,6 +456,12 @@ typedef NS_ENUM(NSInteger, OCROption) {
 
 /// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
 @property (nonatomic, copy) NSArray<NSNumber *> *languages;
+
+/// Whether to classify and correct document orientation before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
+
+/// Whether to apply DocumentAI dewarp before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentDewarp;
 
 @end
 
@@ -483,6 +510,12 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
 @property (nonatomic, copy) NSArray<NSNumber *> *languages;
 
+/// Whether to classify and correct document orientation before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
+
+/// Whether to apply DocumentAI dewarp before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentDewarp;
+
 @end
 
 /// \brief PDF to RTF conversion parameter object.
@@ -524,6 +557,12 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
 @property (nonatomic, copy) NSArray<NSNumber *> *languages;
 
+/// Whether to classify and correct document orientation before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
+
+/// Whether to apply DocumentAI dewarp before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentDewarp;
+
 @end
 
 /// \brief PDF to Image conversion parameter object.
@@ -543,6 +582,12 @@ typedef NS_ENUM(NSInteger, OCROption) {
 
 /// Page ranges for conversion (e.g. @"1-3,5,7-9")
 @property (nonatomic, copy) NSString *pageRanges;
+
+/// Whether to classify and correct document orientation before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
+
+/// Whether to apply DocumentAI dewarp before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentDewarp;
 
 @end
 
@@ -575,6 +620,12 @@ typedef NS_ENUM(NSInteger, OCROption) {
 
 /// Whether to format tables when converting to TXT
 @property (nonatomic, assign) BOOL TableFormat;
+
+/// Whether to classify and correct document orientation before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
+
+/// Whether to apply DocumentAI dewarp before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentDewarp;
 
 @end
 
@@ -614,6 +665,12 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// Whether to include tables when converting to JSON
 @property (nonatomic, assign) BOOL ContainTable;
 
+/// Whether to classify and correct document orientation before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
+
+/// Whether to apply DocumentAI dewarp before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentDewarp;
+
 @end
 
 /// \brief PDF to SearchablePdf conversion parameter object.
@@ -648,6 +705,12 @@ typedef NS_ENUM(NSInteger, OCROption) {
 
 /// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
 @property (nonatomic, copy) NSArray<NSNumber *> *languages;
+
+/// Whether to classify and correct document orientation before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
+
+/// Whether to apply DocumentAI dewarp before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentDewarp;
 
 @end
 
@@ -684,6 +747,12 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
 @property (nonatomic, copy) NSArray<NSNumber *> *languages;
 
+/// Whether to classify and correct document orientation before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
+
+/// Whether to apply DocumentAI dewarp before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentDewarp;
+
 @end
 
 /// \brief PDF to Markdown conversion parameter object.
@@ -719,5 +788,10 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
 @property (nonatomic, copy) NSArray<NSNumber *> *languages;
 
-@end
+/// Whether to classify and correct document orientation before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
 
+/// Whether to apply DocumentAI dewarp before OCR image recognition.
+@property (nonatomic, assign) BOOL enableDocumentDewarp;
+
+@end
