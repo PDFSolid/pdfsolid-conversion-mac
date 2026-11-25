@@ -142,7 +142,8 @@ typedef NS_ENUM(NSInteger, ErrorCode) {
     /// The table data is invalid or null.
     ErrorCodeInvalidTable = 94,
 
-    /// The requested feature is not supported by this build.
+    /// The conversion produced output, but the document uses features that may affect
+    /// fidelity (Word to PDF). A real conversion failure returns its own error code instead.
     ErrorCodeUnsupportedFeature = 95,
 
     /// Unknown error
@@ -223,6 +224,24 @@ typedef NS_ENUM(NSInteger, OCROption) {
     OCROptionAll,
 };
 
+/// \brief License type returned by +[LibraryManager getLicenseType].
+typedef NS_ENUM(NSInteger, LicenseType) {
+    /// No license has been verified, or the license type is unavailable.
+    LicenseTypeUnknown = 0,
+    /// Trial license.
+    LicenseTypeTrial = 1,
+    /// Formal license.
+    LicenseTypeFormal = 2,
+};
+
+/// \brief Table recognition accuracy.
+typedef NS_ENUM(NSInteger, TableRecognitionAccuracy) {
+    /// Prioritize recognition accuracy; may use more resources.
+    TableRecognitionAccuracyHighAccuracy = 0,
+    /// Balanced recognition accuracy, resource usage, and throughput.
+    TableRecognitionAccuracyBalanced = 1,
+};
+
 /// \brief Convert options.
 @interface ConvertOptions : NSObject
 
@@ -301,15 +320,49 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
 @property (nonatomic, copy) NSArray<NSNumber *> *languages;
 
-/// Whether to classify and correct document orientation before OCR image recognition.
+/// Table recognition accuracy. Defaults to TableRecognitionAccuracyBalanced, which works with the base
+/// documentai.model; TableRecognitionAccuracyHighAccuracy requires the table_legacy.model package. If the
+/// model of the requested accuracy is not loaded, the conversion still succeeds, but tables are recognized
+/// with the rule-based method instead, so the result differs.
+@property (nonatomic, assign) TableRecognitionAccuracy tableRecognitionAccuracy;
+
+/// Whether to classify and correct document orientation before OCR image recognition. Defaults to NO.
 @property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
 
-/// Whether to apply DocumentAI dewarp before OCR image recognition.
+/// Whether to apply DocumentAI dewarp before OCR image recognition. Defaults to NO.
 @property (nonatomic, assign) BOOL enableDocumentDewarp;
+
+/// Whether to size the output page from the image's own resolution, matching it to the
+/// nearest standard paper. Only takes effect when the input is an image file; when NO,
+/// one image pixel becomes one page point. Defaults to NO.
+@property (nonatomic, assign) BOOL enableAutoPageSize;
+
+/// Output page width in points (1 pt = 1/72 inch), or 0 to not specify one. Set together with
+/// customPageHeight to choose the page outright, which takes precedence over enableAutoPageSize.
+/// The image is scaled to fit inside the page without cropping. Only takes effect when the input
+/// is an image file. For example A4 is 595.28 x 841.89.
+@property (nonatomic, assign) float customPageWidth;
+
+/// Output page height in points. See customPageWidth.
+@property (nonatomic, assign) float customPageHeight;
 
 @end
 
+/// How the PDF bookmarks (the outline shown in a reader's navigation panel) are generated
+/// when converting a Word document to PDF.
+typedef NS_ENUM(NSInteger, WordPdfBookmarkMode) {
+    /// Do not generate bookmarks.
+    WordPdfBookmarkModeNone = 0,
+    /// One bookmark per heading, nested by outline level.
+    WordPdfBookmarkModeHeadings,
+    /// One bookmark per Word bookmark, named after it.
+    WordPdfBookmarkModeWordBookmarks,
+};
+
 /// \brief PDF to Word conversion parameter object.
+///
+/// Also used by Word to PDF (startWordToPDF), which reads only pageRanges and
+/// wordPdfBookmarkMode; every other setting is ignored there.
 @interface WordOptions : NSObject
 
 /// Whether to remove AI content during conversion
@@ -351,11 +404,36 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
 @property (nonatomic, copy) NSArray<NSNumber *> *languages;
 
-/// Whether to classify and correct document orientation before OCR image recognition.
+/// Table recognition accuracy. Defaults to TableRecognitionAccuracyBalanced, which works with the base
+/// documentai.model; TableRecognitionAccuracyHighAccuracy requires the table_legacy.model package. If the
+/// model of the requested accuracy is not loaded, the conversion still succeeds, but tables are recognized
+/// with the rule-based method instead, so the result differs.
+@property (nonatomic, assign) TableRecognitionAccuracy tableRecognitionAccuracy;
+
+/// Whether to classify and correct document orientation before OCR image recognition. Defaults to NO.
 @property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
 
-/// Whether to apply DocumentAI dewarp before OCR image recognition.
+/// Whether to apply DocumentAI dewarp before OCR image recognition. Defaults to NO.
 @property (nonatomic, assign) BOOL enableDocumentDewarp;
+
+/// Whether to size the output page from the image's own resolution, matching it to the
+/// nearest standard paper. Only takes effect when the input is an image file; when NO,
+/// one image pixel becomes one page point. Defaults to NO.
+@property (nonatomic, assign) BOOL enableAutoPageSize;
+
+/// Output page width in points (1 pt = 1/72 inch), or 0 to not specify one. Set together with
+/// customPageHeight to choose the page outright, which takes precedence over enableAutoPageSize.
+/// The image is scaled to fit inside the page without cropping. Only takes effect when the input
+/// is an image file. For example A4 is 595.28 x 841.89.
+@property (nonatomic, assign) float customPageWidth;
+
+/// Output page height in points. See customPageWidth.
+@property (nonatomic, assign) float customPageHeight;
+
+
+/// How the PDF bookmarks are generated. Only takes effect for Word to PDF.
+/// Defaults to WordPdfBookmarkModeNone.
+@property (nonatomic, assign) WordPdfBookmarkMode wordPdfBookmarkMode;
 
 @end
 
@@ -410,11 +488,31 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// Whether each worksheet contains only one table
 @property (nonatomic, assign) ExcelWorksheetOption excelWorksheetOption;
 
-/// Whether to classify and correct document orientation before OCR image recognition.
+/// Table recognition accuracy. Defaults to TableRecognitionAccuracyBalanced, which works with the base
+/// documentai.model; TableRecognitionAccuracyHighAccuracy requires the table_legacy.model package. If the
+/// model of the requested accuracy is not loaded, the conversion still succeeds, but tables are recognized
+/// with the rule-based method instead, so the result differs.
+@property (nonatomic, assign) TableRecognitionAccuracy tableRecognitionAccuracy;
+
+/// Whether to classify and correct document orientation before OCR image recognition. Defaults to NO.
 @property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
 
-/// Whether to apply DocumentAI dewarp before OCR image recognition.
+/// Whether to apply DocumentAI dewarp before OCR image recognition. Defaults to NO.
 @property (nonatomic, assign) BOOL enableDocumentDewarp;
+
+/// Whether to size the output page from the image's own resolution, matching it to the
+/// nearest standard paper. Only takes effect when the input is an image file; when NO,
+/// one image pixel becomes one page point. Defaults to NO.
+@property (nonatomic, assign) BOOL enableAutoPageSize;
+
+/// Output page width in points (1 pt = 1/72 inch), or 0 to not specify one. Set together with
+/// customPageHeight to choose the page outright, which takes precedence over enableAutoPageSize.
+/// The image is scaled to fit inside the page without cropping. Only takes effect when the input
+/// is an image file. For example A4 is 595.28 x 841.89.
+@property (nonatomic, assign) float customPageWidth;
+
+/// Output page height in points. See customPageWidth.
+@property (nonatomic, assign) float customPageHeight;
 
 @end
 
@@ -457,11 +555,31 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
 @property (nonatomic, copy) NSArray<NSNumber *> *languages;
 
-/// Whether to classify and correct document orientation before OCR image recognition.
+/// Table recognition accuracy. Defaults to TableRecognitionAccuracyBalanced, which works with the base
+/// documentai.model; TableRecognitionAccuracyHighAccuracy requires the table_legacy.model package. If the
+/// model of the requested accuracy is not loaded, the conversion still succeeds, but tables are recognized
+/// with the rule-based method instead, so the result differs.
+@property (nonatomic, assign) TableRecognitionAccuracy tableRecognitionAccuracy;
+
+/// Whether to classify and correct document orientation before OCR image recognition. Defaults to NO.
 @property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
 
-/// Whether to apply DocumentAI dewarp before OCR image recognition.
+/// Whether to apply DocumentAI dewarp before OCR image recognition. Defaults to NO.
 @property (nonatomic, assign) BOOL enableDocumentDewarp;
+
+/// Whether to size the output page from the image's own resolution, matching it to the
+/// nearest standard paper. Only takes effect when the input is an image file; when NO,
+/// one image pixel becomes one page point. Defaults to NO.
+@property (nonatomic, assign) BOOL enableAutoPageSize;
+
+/// Output page width in points (1 pt = 1/72 inch), or 0 to not specify one. Set together with
+/// customPageHeight to choose the page outright, which takes precedence over enableAutoPageSize.
+/// The image is scaled to fit inside the page without cropping. Only takes effect when the input
+/// is an image file. For example A4 is 595.28 x 841.89.
+@property (nonatomic, assign) float customPageWidth;
+
+/// Output page height in points. See customPageWidth.
+@property (nonatomic, assign) float customPageHeight;
 
 @end
 
@@ -510,11 +628,31 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
 @property (nonatomic, copy) NSArray<NSNumber *> *languages;
 
-/// Whether to classify and correct document orientation before OCR image recognition.
+/// Table recognition accuracy. Defaults to TableRecognitionAccuracyBalanced, which works with the base
+/// documentai.model; TableRecognitionAccuracyHighAccuracy requires the table_legacy.model package. If the
+/// model of the requested accuracy is not loaded, the conversion still succeeds, but tables are recognized
+/// with the rule-based method instead, so the result differs.
+@property (nonatomic, assign) TableRecognitionAccuracy tableRecognitionAccuracy;
+
+/// Whether to classify and correct document orientation before OCR image recognition. Defaults to NO.
 @property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
 
-/// Whether to apply DocumentAI dewarp before OCR image recognition.
+/// Whether to apply DocumentAI dewarp before OCR image recognition. Defaults to NO.
 @property (nonatomic, assign) BOOL enableDocumentDewarp;
+
+/// Whether to size the output page from the image's own resolution, matching it to the
+/// nearest standard paper. Only takes effect when the input is an image file; when NO,
+/// one image pixel becomes one page point. Defaults to NO.
+@property (nonatomic, assign) BOOL enableAutoPageSize;
+
+/// Output page width in points (1 pt = 1/72 inch), or 0 to not specify one. Set together with
+/// customPageHeight to choose the page outright, which takes precedence over enableAutoPageSize.
+/// The image is scaled to fit inside the page without cropping. Only takes effect when the input
+/// is an image file. For example A4 is 595.28 x 841.89.
+@property (nonatomic, assign) float customPageWidth;
+
+/// Output page height in points. See customPageWidth.
+@property (nonatomic, assign) float customPageHeight;
 
 @end
 
@@ -557,11 +695,31 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
 @property (nonatomic, copy) NSArray<NSNumber *> *languages;
 
-/// Whether to classify and correct document orientation before OCR image recognition.
+/// Table recognition accuracy. Defaults to TableRecognitionAccuracyBalanced, which works with the base
+/// documentai.model; TableRecognitionAccuracyHighAccuracy requires the table_legacy.model package. If the
+/// model of the requested accuracy is not loaded, the conversion still succeeds, but tables are recognized
+/// with the rule-based method instead, so the result differs.
+@property (nonatomic, assign) TableRecognitionAccuracy tableRecognitionAccuracy;
+
+/// Whether to classify and correct document orientation before OCR image recognition. Defaults to NO.
 @property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
 
-/// Whether to apply DocumentAI dewarp before OCR image recognition.
+/// Whether to apply DocumentAI dewarp before OCR image recognition. Defaults to NO.
 @property (nonatomic, assign) BOOL enableDocumentDewarp;
+
+/// Whether to size the output page from the image's own resolution, matching it to the
+/// nearest standard paper. Only takes effect when the input is an image file; when NO,
+/// one image pixel becomes one page point. Defaults to NO.
+@property (nonatomic, assign) BOOL enableAutoPageSize;
+
+/// Output page width in points (1 pt = 1/72 inch), or 0 to not specify one. Set together with
+/// customPageHeight to choose the page outright, which takes precedence over enableAutoPageSize.
+/// The image is scaled to fit inside the page without cropping. Only takes effect when the input
+/// is an image file. For example A4 is 595.28 x 841.89.
+@property (nonatomic, assign) float customPageWidth;
+
+/// Output page height in points. See customPageWidth.
+@property (nonatomic, assign) float customPageHeight;
 
 @end
 
@@ -583,11 +741,19 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// Page ranges for conversion (e.g. @"1-3,5,7-9")
 @property (nonatomic, copy) NSString *pageRanges;
 
-/// Whether to classify and correct document orientation before OCR image recognition.
-@property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
+/// Whether to size the output page from the image's own resolution, matching it to the
+/// nearest standard paper. Only takes effect when the input is an image file; when NO,
+/// one image pixel becomes one page point. Defaults to NO.
+@property (nonatomic, assign) BOOL enableAutoPageSize;
 
-/// Whether to apply DocumentAI dewarp before OCR image recognition.
-@property (nonatomic, assign) BOOL enableDocumentDewarp;
+/// Output page width in points (1 pt = 1/72 inch), or 0 to not specify one. Set together with
+/// customPageHeight to choose the page outright, which takes precedence over enableAutoPageSize.
+/// The image is scaled to fit inside the page without cropping. Only takes effect when the input
+/// is an image file. For example A4 is 595.28 x 841.89.
+@property (nonatomic, assign) float customPageWidth;
+
+/// Output page height in points. See customPageWidth.
+@property (nonatomic, assign) float customPageHeight;
 
 @end
 
@@ -621,11 +787,31 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// Whether to format tables when converting to TXT
 @property (nonatomic, assign) BOOL TableFormat;
 
-/// Whether to classify and correct document orientation before OCR image recognition.
+/// Table recognition accuracy. Defaults to TableRecognitionAccuracyBalanced, which works with the base
+/// documentai.model; TableRecognitionAccuracyHighAccuracy requires the table_legacy.model package. If the
+/// model of the requested accuracy is not loaded, the conversion still succeeds, but tables are recognized
+/// with the rule-based method instead, so the result differs.
+@property (nonatomic, assign) TableRecognitionAccuracy tableRecognitionAccuracy;
+
+/// Whether to classify and correct document orientation before OCR image recognition. Defaults to NO.
 @property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
 
-/// Whether to apply DocumentAI dewarp before OCR image recognition.
+/// Whether to apply DocumentAI dewarp before OCR image recognition. Defaults to NO.
 @property (nonatomic, assign) BOOL enableDocumentDewarp;
+
+/// Whether to size the output page from the image's own resolution, matching it to the
+/// nearest standard paper. Only takes effect when the input is an image file; when NO,
+/// one image pixel becomes one page point. Defaults to NO.
+@property (nonatomic, assign) BOOL enableAutoPageSize;
+
+/// Output page width in points (1 pt = 1/72 inch), or 0 to not specify one. Set together with
+/// customPageHeight to choose the page outright, which takes precedence over enableAutoPageSize.
+/// The image is scaled to fit inside the page without cropping. Only takes effect when the input
+/// is an image file. For example A4 is 595.28 x 841.89.
+@property (nonatomic, assign) float customPageWidth;
+
+/// Output page height in points. See customPageWidth.
+@property (nonatomic, assign) float customPageHeight;
 
 @end
 
@@ -665,11 +851,31 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// Whether to include tables when converting to JSON
 @property (nonatomic, assign) BOOL ContainTable;
 
-/// Whether to classify and correct document orientation before OCR image recognition.
+/// Table recognition accuracy. Defaults to TableRecognitionAccuracyBalanced, which works with the base
+/// documentai.model; TableRecognitionAccuracyHighAccuracy requires the table_legacy.model package. If the
+/// model of the requested accuracy is not loaded, the conversion still succeeds, but tables are recognized
+/// with the rule-based method instead, so the result differs.
+@property (nonatomic, assign) TableRecognitionAccuracy tableRecognitionAccuracy;
+
+/// Whether to classify and correct document orientation before OCR image recognition. Defaults to NO.
 @property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
 
-/// Whether to apply DocumentAI dewarp before OCR image recognition.
+/// Whether to apply DocumentAI dewarp before OCR image recognition. Defaults to NO.
 @property (nonatomic, assign) BOOL enableDocumentDewarp;
+
+/// Whether to size the output page from the image's own resolution, matching it to the
+/// nearest standard paper. Only takes effect when the input is an image file; when NO,
+/// one image pixel becomes one page point. Defaults to NO.
+@property (nonatomic, assign) BOOL enableAutoPageSize;
+
+/// Output page width in points (1 pt = 1/72 inch), or 0 to not specify one. Set together with
+/// customPageHeight to choose the page outright, which takes precedence over enableAutoPageSize.
+/// The image is scaled to fit inside the page without cropping. Only takes effect when the input
+/// is an image file. For example A4 is 595.28 x 841.89.
+@property (nonatomic, assign) float customPageWidth;
+
+/// Output page height in points. See customPageWidth.
+@property (nonatomic, assign) float customPageHeight;
 
 @end
 
@@ -706,11 +912,31 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
 @property (nonatomic, copy) NSArray<NSNumber *> *languages;
 
-/// Whether to classify and correct document orientation before OCR image recognition.
+/// Table recognition accuracy. Defaults to TableRecognitionAccuracyBalanced, which works with the base
+/// documentai.model; TableRecognitionAccuracyHighAccuracy requires the table_legacy.model package. If the
+/// model of the requested accuracy is not loaded, the conversion still succeeds, but tables are recognized
+/// with the rule-based method instead, so the result differs.
+@property (nonatomic, assign) TableRecognitionAccuracy tableRecognitionAccuracy;
+
+/// Whether to classify and correct document orientation before OCR image recognition. Defaults to NO.
 @property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
 
-/// Whether to apply DocumentAI dewarp before OCR image recognition.
+/// Whether to apply DocumentAI dewarp before OCR image recognition. Defaults to NO.
 @property (nonatomic, assign) BOOL enableDocumentDewarp;
+
+/// Whether to size the output page from the image's own resolution, matching it to the
+/// nearest standard paper. Only takes effect when the input is an image file; when NO,
+/// one image pixel becomes one page point. Defaults to NO.
+@property (nonatomic, assign) BOOL enableAutoPageSize;
+
+/// Output page width in points (1 pt = 1/72 inch), or 0 to not specify one. Set together with
+/// customPageHeight to choose the page outright, which takes precedence over enableAutoPageSize.
+/// The image is scaled to fit inside the page without cropping. Only takes effect when the input
+/// is an image file. For example A4 is 595.28 x 841.89.
+@property (nonatomic, assign) float customPageWidth;
+
+/// Output page height in points. See customPageWidth.
+@property (nonatomic, assign) float customPageHeight;
 
 @end
 
@@ -747,11 +973,31 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
 @property (nonatomic, copy) NSArray<NSNumber *> *languages;
 
-/// Whether to classify and correct document orientation before OCR image recognition.
+/// Table recognition accuracy. Defaults to TableRecognitionAccuracyBalanced, which works with the base
+/// documentai.model; TableRecognitionAccuracyHighAccuracy requires the table_legacy.model package. If the
+/// model of the requested accuracy is not loaded, the conversion still succeeds, but tables are recognized
+/// with the rule-based method instead, so the result differs.
+@property (nonatomic, assign) TableRecognitionAccuracy tableRecognitionAccuracy;
+
+/// Whether to classify and correct document orientation before OCR image recognition. Defaults to NO.
 @property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
 
-/// Whether to apply DocumentAI dewarp before OCR image recognition.
+/// Whether to apply DocumentAI dewarp before OCR image recognition. Defaults to NO.
 @property (nonatomic, assign) BOOL enableDocumentDewarp;
+
+/// Whether to size the output page from the image's own resolution, matching it to the
+/// nearest standard paper. Only takes effect when the input is an image file; when NO,
+/// one image pixel becomes one page point. Defaults to NO.
+@property (nonatomic, assign) BOOL enableAutoPageSize;
+
+/// Output page width in points (1 pt = 1/72 inch), or 0 to not specify one. Set together with
+/// customPageHeight to choose the page outright, which takes precedence over enableAutoPageSize.
+/// The image is scaled to fit inside the page without cropping. Only takes effect when the input
+/// is an image file. For example A4 is 595.28 x 841.89.
+@property (nonatomic, assign) float customPageWidth;
+
+/// Output page height in points. See customPageWidth.
+@property (nonatomic, assign) float customPageHeight;
 
 @end
 
@@ -788,10 +1034,30 @@ typedef NS_ENUM(NSInteger, OCROption) {
 /// OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].
 @property (nonatomic, copy) NSArray<NSNumber *> *languages;
 
-/// Whether to classify and correct document orientation before OCR image recognition.
+/// Table recognition accuracy. Defaults to TableRecognitionAccuracyBalanced, which works with the base
+/// documentai.model; TableRecognitionAccuracyHighAccuracy requires the table_legacy.model package. If the
+/// model of the requested accuracy is not loaded, the conversion still succeeds, but tables are recognized
+/// with the rule-based method instead, so the result differs.
+@property (nonatomic, assign) TableRecognitionAccuracy tableRecognitionAccuracy;
+
+/// Whether to classify and correct document orientation before OCR image recognition. Defaults to NO.
 @property (nonatomic, assign) BOOL enableDocumentOrientationClassification;
 
-/// Whether to apply DocumentAI dewarp before OCR image recognition.
+/// Whether to apply DocumentAI dewarp before OCR image recognition. Defaults to NO.
 @property (nonatomic, assign) BOOL enableDocumentDewarp;
+
+/// Whether to size the output page from the image's own resolution, matching it to the
+/// nearest standard paper. Only takes effect when the input is an image file; when NO,
+/// one image pixel becomes one page point. Defaults to NO.
+@property (nonatomic, assign) BOOL enableAutoPageSize;
+
+/// Output page width in points (1 pt = 1/72 inch), or 0 to not specify one. Set together with
+/// customPageHeight to choose the page outright, which takes precedence over enableAutoPageSize.
+/// The image is scaled to fit inside the page without cropping. Only takes effect when the input
+/// is an image file. For example A4 is 595.28 x 841.89.
+@property (nonatomic, assign) float customPageWidth;
+
+/// Output page height in points. See customPageWidth.
+@property (nonatomic, assign) float customPageHeight;
 
 @end

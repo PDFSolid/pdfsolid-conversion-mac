@@ -3,8 +3,11 @@ var interface_word_options =
     [ "contain_page_background_image", "interface_word_options.html#a365eddfdb445bbed8942f36363976b25", null ],
     [ "containAnnotation", "interface_word_options.html#a5ac63b99e5ef9aca3dd783c3db2a8a11", null ],
     [ "containImage", "interface_word_options.html#a27cda97276a96c513c01287e30c689d2", null ],
+    [ "customPageHeight", "interface_word_options.html#adf09fd604b8514870dba0ee7ae8865d5", null ],
+    [ "customPageWidth", "interface_word_options.html#a6f48fc733ef7fa4c35f46f527d7086e8", null ],
     [ "enableAILayout", "interface_word_options.html#a37d3388b4067eb1eff9848298e588469", null ],
     [ "enableAITableRecognition", "interface_word_options.html#a8968c91078a409d3dd560197ae74bd27", null ],
+    [ "enableAutoPageSize", "interface_word_options.html#ac9d0cc37a8ffb282ccba6d0f5d80bd06", null ],
     [ "enableDocumentDewarp", "interface_word_options.html#a00de2007f2d8b00f75a27084d8c176dc", null ],
     [ "enableDocumentOrientationClassification", "interface_word_options.html#af0a0f4ca15f7aae6e3412da9500bbd8b", null ],
     [ "enableOCR", "interface_word_options.html#a6f5822f270b132ff539882fbaf4aa068", null ],
@@ -14,5 +17,7 @@ var interface_word_options =
     [ "ocrOption", "interface_word_options.html#a182f017be7e1e78169e6721ffab77ef4", null ],
     [ "output_document_per_page", "interface_word_options.html#a738d8d5f5c52c7291a824e94f4c6f4d9", null ],
     [ "pageLayoutMode", "interface_word_options.html#a8c6b0704f9876233907e24870d724f90", null ],
-    [ "pageRanges", "interface_word_options.html#af3334b01329d8f531aff024b2e4d250c", null ]
+    [ "pageRanges", "interface_word_options.html#af3334b01329d8f531aff024b2e4d250c", null ],
+    [ "tableRecognitionAccuracy", "interface_word_options.html#a3a59b94ccae9dde1e9da205f58b9c344", null ],
+    [ "wordPdfBookmarkMode", "interface_word_options.html#a509eb1d472cdcac18c1b5a3683738ff6", null ]
 ];

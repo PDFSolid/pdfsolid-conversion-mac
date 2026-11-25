@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['developer_5fguide_5fobjectivec_2emd_0',['developer_guide_objectivec.md',['../developer__guide__objectivec_8md.html',1,'']]],
-  ['dewarp_3aandoutputimage_3a_1',['Dewarp:andOutputImage:',['../interface_c_p_d_f_document_a_i.html#a1e0cf6f371dbc432f0ba82548d97850d',1,'CPDFDocumentAI']]],
-  ['distribution_20notes_2',['Distribution Notes',['../index.html#autotoc_md5',1,'']]],
-  ['document_5fai_2eh_3',['document_ai.h',['../document__ai_8h.html',1,'']]]
+  ['imagecolormode_0',['imageColorMode',['../interface_convert_options.html#aaae5018424333963dc4ed89ef40f63f4',1,'ConvertOptions']]],
+  ['imageoptions_1',['ImageOptions',['../interface_image_options.html',1,'']]],
+  ['imagepathenhance_2',['imagePathEnhance',['../interface_convert_options.html#a3dad772d722345a1b79f3e053f26fce6',1,'ConvertOptions']]],
+  ['imagescaling_3',['imageScaling',['../interface_convert_options.html#afbd25eb8c9ec3ac48b31c5fe37d9ba8c',1,'ConvertOptions']]],
+  ['imagetype_4',['imageType',['../interface_convert_options.html#a86205d9eabc3bc56a51400de743aefbe',1,'ConvertOptions']]],
+  ['initialize_3a_5',['initialize:',['../interface_library_manager.html#a06bb662e61396f1704b5388f16bdaac3',1,'LibraryManager']]],
+  ['initialize_3ascanofficefonts_3a_6',['initialize:scanOfficeFonts:',['../interface_library_manager.html#a0e85517358feb5fe74507a4d39bcb740',1,'LibraryManager']]],
+  ['iscancelled_7',['isCancelled',['../protocol_convert_callback-p.html#a2bf98366bcf87fd3db2426edbf692bd3',1,'ConvertCallback-p']]]
 ];

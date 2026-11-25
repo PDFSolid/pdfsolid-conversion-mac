@@ -298,6 +298,56 @@ NS_ASSUME_NONNULL_BEGIN
                     options:(OfdOptions * _Nonnull)options
                    callback:(id<ConvertCallback> _Nullable)callback;
 
+/**
+ * @brief Starts the conversion of a Word document to a PDF file with default options.
+ * @param filePath The input Word (.docx) file path
+ * @param outputPath The output PDF file path
+ * @return Error code, 0 for success. ErrorCodeUnsupportedFeature means the PDF was usually still
+ *         produced but the document uses features that may affect fidelity.
+ */
++ (ErrorCode)startWordToPDF:(NSString * _Nonnull)filePath
+                 outputPath:(NSString * _Nonnull)outputPath;
+
+/**
+ * @brief Starts the conversion of a Word document to a PDF file.
+ * @param filePath The input Word (.docx) file path
+ * @param outputPath The output PDF file path
+ * @param options Conversion settings (WordOptions). Word to PDF uses only pageRanges and
+ *                wordPdfBookmarkMode; every other setting is ignored.
+ * @return Error code, 0 for success. ErrorCodeUnsupportedFeature means the PDF was usually still
+ *         produced but the document uses features that may affect fidelity. ErrorCodePDFPage means
+ *         pageRanges selects no existing page.
+ */
++ (ErrorCode)startWordToPDF:(NSString * _Nonnull)filePath
+                 outputPath:(NSString * _Nonnull)outputPath
+                    options:(WordOptions * _Nonnull)options;
+
++ (ErrorCode)startWordToPDF:(NSString * _Nonnull)filePath
+                 outputPath:(NSString * _Nonnull)outputPath
+                    options:(WordOptions * _Nonnull)options
+                   progress:(COMProgressBlock _Nullable)progress
+                     cancel:(COMCancelBlock _Nullable)cancel;
+
++ (ErrorCode)startWordToPDF:(NSString * _Nonnull)filePath
+                 outputPath:(NSString * _Nonnull)outputPath
+                    options:(WordOptions * _Nonnull)options
+                   callback:(id<ConvertCallback> _Nullable)callback;
+
+/**
+ * @brief Starts the conversion of a Word document to a PDF file and reports diagnostics.
+ * @param diagnostics Receives the UTF-8 diagnostic text, or nil when not needed. The first line is
+ *        "output=produced" or "output=not_produced"; each following line is one "feature:reason"
+ *        entry, reported once per feature. Set to an empty string when there is nothing to report.
+ * @return See startWordToPDF:outputPath:options:. Returns ErrorCodeOutOfMemory if the diagnostics
+ *         do not fit in the SDK's 8192-byte buffer.
+ */
++ (ErrorCode)startWordToPDF:(NSString * _Nonnull)filePath
+                 outputPath:(NSString * _Nonnull)outputPath
+                    options:(WordOptions * _Nonnull)options
+                   progress:(COMProgressBlock _Nullable)progress
+                     cancel:(COMCancelBlock _Nullable)cancel
+                diagnostics:(NSString * _Nullable * _Nullable)diagnostics;
+
 @end
 
 NS_ASSUME_NONNULL_END

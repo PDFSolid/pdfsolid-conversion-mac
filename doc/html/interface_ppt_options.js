@@ -3,8 +3,11 @@ var interface_ppt_options =
     [ "contain_page_background_image", "interface_ppt_options.html#a6e6ba6803f095522beb4454633f57f0f", null ],
     [ "containAnnotation", "interface_ppt_options.html#a57f93cf39d3d46808e84519d3e908aa1", null ],
     [ "containImage", "interface_ppt_options.html#a5540541410091799569cdb1cead01f43", null ],
+    [ "customPageHeight", "interface_ppt_options.html#a6dc4602dbea60b424dfbc47788dedb17", null ],
+    [ "customPageWidth", "interface_ppt_options.html#af0b16a77a73a197b168ff40a5bebe7ea", null ],
     [ "enableAILayout", "interface_ppt_options.html#a21fd5a3a87b7f2ae9ab32194784f5e21", null ],
     [ "enableAITableRecognition", "interface_ppt_options.html#a5680aa97d6088f435a78391e94ada32e", null ],
+    [ "enableAutoPageSize", "interface_ppt_options.html#a6938ef06e9ea6e2aaaa5e5f959dab5e3", null ],
     [ "enableDocumentDewarp", "interface_ppt_options.html#a67705de65b26e4748dbea2fbfb168276", null ],
     [ "enableDocumentOrientationClassification", "interface_ppt_options.html#af069f18086504bb017b8fbee278d2196", null ],
     [ "enableOCR", "interface_ppt_options.html#a015f849adb741cc84f6612ecc450a489", null ],
@@ -13,5 +16,6 @@ var interface_ppt_options =
     [ "languages", "interface_ppt_options.html#a1dc489fe9cf05588c79d6b3d0c061611", null ],
     [ "ocrOption", "interface_ppt_options.html#ad5c2acb1123221f798b69168bc8e7324", null ],
     [ "output_document_per_page", "interface_ppt_options.html#aa5b97fcccf9b955dba10ecc1e332f201", null ],
-    [ "pageRanges", "interface_ppt_options.html#a61a0134840229c4fc00eef066f07bb0a", null ]
+    [ "pageRanges", "interface_ppt_options.html#a61a0134840229c4fc00eef066f07bb0a", null ],
+    [ "tableRecognitionAccuracy", "interface_ppt_options.html#abfa9a6c40c4975061551bc9aee49d1e5", null ]
 ];

@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['macos_0',['PDFSolid Conversion SDK 1.2.0 for macOS',['../index.html',1,'']]],
-  ['magiccolor_3aandoutputimage_3a_1',['MagicColor:andOutputImage:',['../interface_c_p_d_f_document_a_i.html#a8e3a591b8abd9f6f5c7307e0fd752eeb',1,'CPDFDocumentAI']]],
-  ['markdownoptions_2',['MarkdownOptions',['../interface_markdown_options.html',1,'']]]
+  ['tableformat_0',['TableFormat',['../interface_txt_options.html#ae98283352617e3eb6ffd5149c09d3cec',1,'TxtOptions']]],
+  ['tablerecognitionaccuracy_1',['tableRecognitionAccuracy',['../interface_convert_options.html#af67442c1e41f063944c5361997ea2e05',1,'ConvertOptions::tableRecognitionAccuracy'],['../interface_word_options.html#a3a59b94ccae9dde1e9da205f58b9c344',1,'WordOptions::tableRecognitionAccuracy'],['../interface_excel_options.html#a87d14c7fd4a850811cc15cf1b12c8ce7',1,'ExcelOptions::tableRecognitionAccuracy'],['../interface_ppt_options.html#abfa9a6c40c4975061551bc9aee49d1e5',1,'PptOptions::tableRecognitionAccuracy'],['../interface_html_options.html#a1e5b49ba725daa183f8ef1f0ad0a7aa3',1,'HtmlOptions::tableRecognitionAccuracy'],['../interface_rtf_options.html#a3eaead065a92198861d9259954924de0',1,'RtfOptions::tableRecognitionAccuracy'],['../interface_txt_options.html#ac124efed7f39bd1b5b916666fa91012b',1,'TxtOptions::tableRecognitionAccuracy'],['../interface_json_options.html#aa57bba880af369473c5ed1f8b3ac8ee7',1,'JsonOptions::tableRecognitionAccuracy'],['../interface_searchable_pdf_options.html#a2f5dae6c61124821bcb3e8f7f569f934',1,'SearchablePdfOptions::tableRecognitionAccuracy'],['../interface_ofd_options.html#abdae72a6cb53800579609e6715bee876',1,'OfdOptions::tableRecognitionAccuracy'],['../interface_markdown_options.html#ac8c81e5f481585fc23d5b850208f24b8',1,'MarkdownOptions::tableRecognitionAccuracy']]],
+  ['transparenttext_2',['transparentText',['../interface_convert_options.html#a9b29888b868d19c97af7ded0447fba6e',1,'ConvertOptions::transparentText'],['../interface_searchable_pdf_options.html#a2aaa2a864fedba0373074cfcd5f18022',1,'SearchablePdfOptions::transparentText'],['../interface_ofd_options.html#a0806d789e87d2c7ed079f40b90658885',1,'OfdOptions::transparentText']]],
+  ['txtoptions_3',['TxtOptions',['../interface_txt_options.html',1,'']]],
+  ['txttableformat_4',['txtTableFormat',['../interface_convert_options.html#a510035bab2d6eae00a6cba7938fcb56f',1,'ConvertOptions']]],
+  ['type_5',['Type',['../interface_image_options.html#a23ca6c8aada2f104ef03e423fc36a607',1,'ImageOptions']]]
 ];

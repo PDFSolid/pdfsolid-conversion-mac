@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDFSolid Conversion Objective-C SDK (mac): MarkdownOptions Class Reference</title>
+<title>PDFSolid Conversion Objective-C SDK (macOS): MarkdownOptions Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,8 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PDFSolid Conversion Objective-C SDK (mac)<span id="projectnumber">&#160;1.2.0</span>
+   <div id="projectname">PDFSolid Conversion Objective-C SDK (macOS)<span id="projectnumber">&#160;1.3.0</span>
    </div>
+   <div id="projectbrief">API Reference Documentation for PDFSolid Conversion Objective-C SDK (macOS)</div>
   </td>
  </tr>
  </tbody>
@@ -125,15 +126,20 @@ Properties</h2></td></tr>
 <tr class="memdesc:afd23b644a5436814495d8bd6c6594073"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to enable AI table recognition during conversion.  <br /></td></tr>
 <tr class="memitem:a6c4484dff5461203d537fbdd0710cfaf" id="r_a6c4484dff5461203d537fbdd0710cfaf"><td class="memItemLeft" align="right" valign="top">NSArray&lt; NSNumber * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c4484dff5461203d537fbdd0710cfaf">languages</a></td></tr>
 <tr class="memdesc:a6c4484dff5461203d537fbdd0710cfaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)].  <br /></td></tr>
+<tr class="memitem:ac8c81e5f481585fc23d5b850208f24b8" id="r_ac8c81e5f481585fc23d5b850208f24b8"><td class="memItemLeft" align="right" valign="top">TableRecognitionAccuracy&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8c81e5f481585fc23d5b850208f24b8">tableRecognitionAccuracy</a></td></tr>
 <tr class="memitem:a2c5f73e7b4bff699dda8a857959cc4a1" id="r_a2c5f73e7b4bff699dda8a857959cc4a1"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c5f73e7b4bff699dda8a857959cc4a1">enableDocumentOrientationClassification</a></td></tr>
-<tr class="memdesc:a2c5f73e7b4bff699dda8a857959cc4a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to classify and correct document orientation before OCR image recognition.  <br /></td></tr>
+<tr class="memdesc:a2c5f73e7b4bff699dda8a857959cc4a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to classify and correct document orientation before OCR image recognition. Defaults to NO.  <br /></td></tr>
 <tr class="memitem:a92ad1917dee6dbc42c824e17faf04105" id="r_a92ad1917dee6dbc42c824e17faf04105"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92ad1917dee6dbc42c824e17faf04105">enableDocumentDewarp</a></td></tr>
-<tr class="memdesc:a92ad1917dee6dbc42c824e17faf04105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to apply DocumentAI dewarp before OCR image recognition.  <br /></td></tr>
+<tr class="memdesc:a92ad1917dee6dbc42c824e17faf04105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to apply DocumentAI dewarp before OCR image recognition. Defaults to NO.  <br /></td></tr>
+<tr class="memitem:a718d444691cf23ae692998cc2656532e" id="r_a718d444691cf23ae692998cc2656532e"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a718d444691cf23ae692998cc2656532e">enableAutoPageSize</a></td></tr>
+<tr class="memitem:a69856dd06e76df23ba7ca1f48715cfa9" id="r_a69856dd06e76df23ba7ca1f48715cfa9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69856dd06e76df23ba7ca1f48715cfa9">customPageWidth</a></td></tr>
+<tr class="memitem:accc23a08520ecedd61755623e127a0af" id="r_accc23a08520ecedd61755623e127a0af"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accc23a08520ecedd61755623e127a0af">customPageHeight</a></td></tr>
+<tr class="memdesc:accc23a08520ecedd61755623e127a0af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output page height in points. See customPageWidth.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>PDF to Markdown conversion parameter object. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00759">759</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l01005">1005</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 </div><a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Property Documentation</h2>
 <a id="a4032cbec540301ecb705de862b4dff3c" name="a4032cbec540301ecb705de862b4dff3c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4032cbec540301ecb705de862b4dff3c">&#9670;&#160;</a></span>containAnnotation</h2>
@@ -157,7 +163,7 @@ Properties</h2></td></tr>
 
 <p>Whether to include annotations. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00768">768</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l01014">1014</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -183,7 +189,58 @@ Properties</h2></td></tr>
 
 <p>Whether to include images (only effective when OCR is disabled) </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00765">765</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l01011">1011</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+
+</div>
+</div>
+<a id="accc23a08520ecedd61755623e127a0af" name="accc23a08520ecedd61755623e127a0af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accc23a08520ecedd61755623e127a0af">&#9670;&#160;</a></span>customPageHeight</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) customPageHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel read">read</span><span class="mlabel write">write</span><span class="mlabel nonatomic">nonatomic</span><span class="mlabel assign">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Output page height in points. See customPageWidth. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l01061">1061</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+
+</div>
+</div>
+<a id="a69856dd06e76df23ba7ca1f48715cfa9" name="a69856dd06e76df23ba7ca1f48715cfa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69856dd06e76df23ba7ca1f48715cfa9">&#9670;&#160;</a></span>customPageWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) customPageWidth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel read">read</span><span class="mlabel write">write</span><span class="mlabel nonatomic">nonatomic</span><span class="mlabel assign">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Output page width in points (1 pt = 1/72 inch), or 0 to not specify one. Set together with customPageHeight to choose the page outright, which takes precedence over enableAutoPageSize. The image is scaled to fit inside the page without cropping. Only takes effect when the input is an image file. For example A4 is 595.28 x 841.89. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l01058">1058</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -209,7 +266,7 @@ Properties</h2></td></tr>
 
 <p>Whether to remove AI content during conversion. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00783">783</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l01029">1029</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -235,7 +292,32 @@ Properties</h2></td></tr>
 
 <p>Whether to enable AI table recognition during conversion. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00786">786</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l01032">1032</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+
+</div>
+</div>
+<a id="a718d444691cf23ae692998cc2656532e" name="a718d444691cf23ae692998cc2656532e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a718d444691cf23ae692998cc2656532e">&#9670;&#160;</a></span>enableAutoPageSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) enableAutoPageSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel read">read</span><span class="mlabel write">write</span><span class="mlabel nonatomic">nonatomic</span><span class="mlabel assign">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Whether to size the output page from the image's own resolution, matching it to the nearest standard paper. Only takes effect when the input is an image file; when NO, one image pixel becomes one page point. Defaults to NO. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l01052">1052</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -259,9 +341,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Whether to apply DocumentAI dewarp before OCR image recognition. </p>
+<p>Whether to apply DocumentAI dewarp before OCR image recognition. Defaults to NO. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00795">795</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l01047">1047</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -285,9 +367,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Whether to classify and correct document orientation before OCR image recognition. </p>
+<p>Whether to classify and correct document orientation before OCR image recognition. Defaults to NO. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00792">792</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l01044">1044</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -313,7 +395,7 @@ Properties</h2></td></tr>
 
 <p>Whether to enable OCR. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00762">762</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l01008">1008</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -339,7 +421,7 @@ Properties</h2></td></tr>
 
 <p>Specify the font name to convert, e.g. "Arial". </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00780">780</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l01026">1026</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -365,7 +447,7 @@ Properties</h2></td></tr>
 
 <p>OCR languages for the current task. Pass boxed OCRLanguage values, for example @[@(OCRLanguageEnglish)]. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00789">789</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l01035">1035</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -391,7 +473,7 @@ Properties</h2></td></tr>
 
 <p>OCR option scope. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00774">774</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l01020">1020</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -417,7 +499,7 @@ Properties</h2></td></tr>
 
 <p>whether to output one document per page. </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00771">771</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l01017">1017</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>
@@ -443,7 +525,32 @@ Properties</h2></td></tr>
 
 <p>Page ranges for conversion (e.g. "1-3,5,7-9") </p>
 
-<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l00777">777</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l01023">1023</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
+
+</div>
+</div>
+<a id="ac8c81e5f481585fc23d5b850208f24b8" name="ac8c81e5f481585fc23d5b850208f24b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8c81e5f481585fc23d5b850208f24b8">&#9670;&#160;</a></span>tableRecognitionAccuracy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (TableRecognitionAccuracy) tableRecognitionAccuracy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel read">read</span><span class="mlabel write">write</span><span class="mlabel nonatomic">nonatomic</span><span class="mlabel assign">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Table recognition accuracy. Defaults to TableRecognitionAccuracyBalanced, which works with the base documentai.model; TableRecognitionAccuracyHighAccuracy requires the table_legacy.model package. If the model of the requested accuracy is not loaded, the conversion still succeeds, but tables are recognized with the rule-based method instead, so the result differs. </p>
+
+<p class="definition">Definition at line <a class="el" href="base__type_8h_source.html#l01041">1041</a> of file <a class="el" href="base__type_8h_source.html">base_type.h</a>.</p>
 
 </div>
 </div>

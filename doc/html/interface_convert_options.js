@@ -4,8 +4,11 @@ var interface_convert_options =
     [ "contain_page_background_image", "interface_convert_options.html#a88267a177252f2ce4c2c3126f6d2fae9", null ],
     [ "containAnnotation", "interface_convert_options.html#ae3bc107d0b020f33a9dee80ac27ed6d3", null ],
     [ "containImage", "interface_convert_options.html#a4a084804fbf94886d5c60c9d52a60edd", null ],
+    [ "customPageHeight", "interface_convert_options.html#ac6314f44be7809c4cdf52b8e13225470", null ],
+    [ "customPageWidth", "interface_convert_options.html#a75c1216a73b6d4b82cbf7961912d1b9a", null ],
     [ "enableAILayout", "interface_convert_options.html#adc86ec625d62e966c09a4163bb27b779", null ],
     [ "enableAITableRecognition", "interface_convert_options.html#a361304258466a6e3392c5b6fa28234ed", null ],
+    [ "enableAutoPageSize", "interface_convert_options.html#a010b2413f19e973e1e358575b9db7da8", null ],
     [ "enableDocumentDewarp", "interface_convert_options.html#affe5d607dc972d080d0c2af204110405", null ],
     [ "enableDocumentOrientationClassification", "interface_convert_options.html#a683a5b91a34375f856fc4cf694aa2e59", null ],
     [ "enableOCR", "interface_convert_options.html#a7a9cfaab329e9d4f2bf4f73adec34b53", null ],
@@ -25,6 +28,7 @@ var interface_convert_options =
     [ "output_document_per_page", "interface_convert_options.html#a9be071e8ebe8bd568b50680b883d1eeb", null ],
     [ "pageLayoutMode", "interface_convert_options.html#a44b69b11aab54beb4016370ad2fb8217", null ],
     [ "pageRanges", "interface_convert_options.html#a9f1acac27b19a2bbfebe7090b341381e", null ],
+    [ "tableRecognitionAccuracy", "interface_convert_options.html#af67442c1e41f063944c5361997ea2e05", null ],
     [ "transparentText", "interface_convert_options.html#a9b29888b868d19c97af7ded0447fba6e", null ],
     [ "txtTableFormat", "interface_convert_options.html#a510035bab2d6eae00a6cba7938fcb56f", null ]
 ];

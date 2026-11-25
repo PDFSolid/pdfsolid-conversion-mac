@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['2_200_20for_20macos_0',['PDFSolid Conversion SDK 1.2.0 for macOS',['../index.html',1,'']]]
+  ['macos_0',['PDFSolid Conversion Objective-C SDK (macOS)',['../md_mainpage.html',1,'']]]
 ];

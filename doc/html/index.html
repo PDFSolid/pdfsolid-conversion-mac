@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDFSolid Conversion Objective-C SDK (mac): PDFSolid Conversion SDK 1.2.0 for macOS</title>
+<title>PDFSolid Conversion Objective-C SDK (macOS): Main Page</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,8 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PDFSolid Conversion Objective-C SDK (mac)<span id="projectnumber">&#160;1.2.0</span>
+   <div id="projectname">PDFSolid Conversion Objective-C SDK (macOS)<span id="projectnumber">&#160;1.3.0</span>
    </div>
+   <div id="projectbrief">API Reference Documentation for PDFSolid Conversion Objective-C SDK (macOS)</div>
   </td>
  </tr>
  </tbody>
@@ -87,56 +88,11 @@ $(function(){initNavTree('index.html','',''); });
 </div>
 </div>
 
-<div><div class="header">
-  <div class="headertitle"><div class="title">PDFSolid Conversion SDK 1.2.0 for macOS </div></div>
+<div class="header">
+  <div class="headertitle"><div class="title">PDFSolid Conversion Objective-C SDK (macOS) Documentation</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_doc_2developer__guide__objectivec"></a></p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
-Requirements</h1>
-<ul>
-<li>Apple Silicon or Intel running macOS 11.0+, required by bundled AI libraries.</li>
-<li>Xcode command line tools and CMake 3.20+ for the command-line example.</li>
-<li>A valid PDFSolid license. The supplied license is in <span class="tt">resource/license/license.xml</span>; online verification requires network access.</li>
-</ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
-Package Layout</h1>
-<ul>
-<li><span class="tt">lib/PDFSolid.framework</span>: Objective-C API, universal arm64/x86_64.</li>
-<li><span class="tt">lib/*.dylib</span>: native PDFSolid, DocumentAI, OpenCV and ONNX Runtime.</li>
-<li><span class="tt">resource/models/documentai.model</span>: model required by the macOS sample.</li>
-<li><span class="tt">samples/demo</span>: runnable PDF-to-Word command-line example.</li>
-<li><span class="tt">doc/html/index.html</span>: API reference generated from this framework's headers.</li>
-</ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
-Run the Example</h1>
-<p>From the package root:</p>
-<div class="fragment"><div class="line">bash samples/demo/RunDemo.sh</div>
-</div><!-- fragment --><p>The example verifies SDK version 1.2.0, validates the license, initializes the resource directory, loads the model and converts <span class="tt">samples/input_files/word.pdf</span>. It reports license, model and conversion results separately. A failed license or model load stops conversion. Each run creates a new DOCX in <span class="tt">samples/output_files</span>.</p>
-<p>For explicit paths:</p>
-<div class="fragment"><div class="line">bash samples/demo/RunDemo.sh /path/license.xml /path/resource /path/input.pdf /path/new-output.docx</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
-Integrate</h1>
-<p>Import <span class="tt">&lt;PDFSolid/PDFSolid.h&gt;</span> and link <span class="tt">PDFSolid.framework</span>, Foundation and AppKit. Keep all four dylibs together beside the framework. For an application bundle, copy the framework and dylibs into <span class="tt">Contents/Frameworks</span>, add <span class="tt">@executable_path/../Frameworks</span> to the application's runpath search paths, and sign embedded code with your application's identity after copying.</p>
-<p>The framework module is <span class="tt">PDFSolid</span>. The public classes retain the names <span class="tt">LibraryManager</span>, <span class="tt">CPDFConversion</span>, <span class="tt">WordOptions</span>, <span class="tt">ExcelOptions</span> and other format-specific option classes. Renaming the product does not rename these APIs.</p>
-<div class="fragment"><div class="line">#import &lt;PDFSolid/PDFSolid.h&gt;</div>
-<div class="line"> </div>
-<div class="line">ErrorCode code = [LibraryManager licenseVerify:licensePath];</div>
-<div class="line">if (code == ErrorCodeSuccess) {</div>
-<div class="line">    [LibraryManager initialize:resourcePath];</div>
-<div class="line">    code = [LibraryManager setDocumentAIModel:modelPath gpuId:-1];</div>
-<div class="line">    if (code == ErrorCodeSuccess) {</div>
-<div class="line">        WordOptions *options = [[WordOptions alloc] init];</div>
-<div class="line">        code = [CPDFConversion startPDFToWord:inputPath password:@&quot;&quot;</div>
-<div class="line">                                 outputPath:outputPath options:options];</div>
-<div class="line">    }</div>
-<div class="line">}</div>
-<div class="line">[LibraryManager release];</div>
-</div><!-- fragment --><p>Use the API reference for format-specific options, OCR, page ranges, orientation correction and dewarping. Do not overwrite an input document with output. Library release must run after conversion work has completed.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
-Distribution Notes</h1>
-<p>The binaries carry local ad-hoc signatures, not Developer ID notarization. Sign and notarize your own application as required by your distribution channel. iOS is supplied in a separate package; do not use these macOS binaries on iOS. </p>
-</div></div><!-- PageDoc -->
+<p>See the <a href="md_mainpage.html#autotoc_md1">conversion capabilities</a>, the <a href="interface_c_p_d_f_conversion.html#a2c317dd6f74e3d9ff4fbe1066eea7dd1">Word (DOCX) to PDF API</a>, or the <a href="../developer_guide_objectivec.md">Objective-C developer guide</a>.</p>
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
 </div><!-- doc-content -->

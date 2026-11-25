@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['base_5ftype_2eh_0',['base_type.h',['../base__type_8h.html',1,'']]],
-  ['bbox_1',['bbox',['../interface_c_text_line.html#a889cb6577c648566a206baa97462cba9',1,'CTextLine::bbox'],['../interface_c_table_cell.html#a48a54e3b20e6d86efc99bc78cc9ca4a3',1,'CTableCell::bbox']]],
-  ['bottom_2',['bottom',['../interface_c_rect.html#a8c719e8292ab0a4e6afbe5b5d21b5e44',1,'CRect']]]
+  ['getlayoutresult_0',['getLayoutResult',['../protocol_convert_callback-p.html#a248b39679c2da7744f5d216daa1052f7',1,'ConvertCallback-p']]],
+  ['getlicensetype_1',['getLicenseType',['../interface_library_manager.html#a437290e2bdd1e0cc5da85508a7178399',1,'LibraryManager']]],
+  ['getocrresult_2',['getOcrResult',['../protocol_convert_callback-p.html#a5687dcc8fece35f1260233b60e0871a7',1,'ConvertCallback-p']]],
+  ['getpagecount_3apassword_3a_3',['getPageCount:password:',['../interface_library_manager.html#a994c7e7518e1d918ac48745d77f34010',1,'LibraryManager']]],
+  ['getremainingpagequota_4',['getRemainingPageQuota',['../interface_library_manager.html#ae8b62313a18586597482714ed0ba50c0',1,'LibraryManager']]],
+  ['gettableresult_5',['getTableResult',['../protocol_convert_callback-p.html#aaa3275ba8bb17731988d2781b274e03b',1,'ConvertCallback-p']]],
+  ['getversion_6',['getVersion',['../interface_library_manager.html#a888e7b9dac35736723f6935c64253807',1,'LibraryManager']]]
 ];

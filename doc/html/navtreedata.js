@@ -24,8 +24,11 @@
 */
 var NAVTREE =
 [
-  [ "PDFSolid Conversion Objective-C SDK (mac)", "index.html", [
-    [ "PDFSolid Conversion SDK 1.2.0 for macOS", "index.html", "index" ],
+  [ "PDFSolid Conversion Objective-C SDK (macOS)", "index.html", [
+    [ "PDFSolid Conversion Objective-C SDK (macOS)", "md_mainpage.html", [
+      [ "Capabilities", "md_mainpage.html#autotoc_md1", null ],
+      [ "Framework Usage", "md_mainpage.html#autotoc_md2", null ]
+    ] ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -35,22 +38,14 @@ var NAVTREE =
         [ "Functions", "functions_func.html", null ],
         [ "Properties", "functions_prop.html", "functions_prop" ]
       ] ]
-    ] ],
-    [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ],
-      [ "Globals", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ],
-        [ "Typedefs", "globals_type.html", null ]
-      ] ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"_p_d_f_solid_8h.html",
-"interface_ofd_options.html#af5d3949372d99058f4249e3119eb4b64"
+"annotated.html",
+"interface_rtf_options.html#a4a7f15eced14f41ea3820bd3a24d971e"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

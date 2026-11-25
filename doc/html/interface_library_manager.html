@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDFSolid Conversion Objective-C SDK (mac): LibraryManager Class Reference</title>
+<title>PDFSolid Conversion Objective-C SDK (macOS): LibraryManager Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,8 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">PDFSolid Conversion Objective-C SDK (mac)<span id="projectnumber">&#160;1.2.0</span>
+   <div id="projectname">PDFSolid Conversion Objective-C SDK (macOS)<span id="projectnumber">&#160;1.3.0</span>
    </div>
+   <div id="projectbrief">API Reference Documentation for PDFSolid Conversion Objective-C SDK (macOS)</div>
   </td>
  </tr>
  </tbody>
@@ -103,7 +104,10 @@ Inheritance diagram for LibraryManager:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Class Methods</h2></td></tr>
 <tr class="memitem:a06bb662e61396f1704b5388f16bdaac3" id="r_a06bb662e61396f1704b5388f16bdaac3"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a06bb662e61396f1704b5388f16bdaac3">initialize:</a></td></tr>
+<tr class="memdesc:a06bb662e61396f1704b5388f16bdaac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the SDK. Same as initialize:scanOfficeFonts: with scanOfficeFonts YES.  <br /></td></tr>
+<tr class="memitem:a0e85517358feb5fe74507a4d39bcb740" id="r_a0e85517358feb5fe74507a4d39bcb740"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a0e85517358feb5fe74507a4d39bcb740">initialize:scanOfficeFonts:</a></td></tr>
 <tr class="memitem:afc4b605fdf34933394535cf0474354fc" id="r_afc4b605fdf34933394535cf0474354fc"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#afc4b605fdf34933394535cf0474354fc">licenseVerify:</a></td></tr>
+<tr class="memitem:a437290e2bdd1e0cc5da85508a7178399" id="r_a437290e2bdd1e0cc5da85508a7178399"><td class="memItemLeft" align="right" valign="top">(LicenseType)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a437290e2bdd1e0cc5da85508a7178399">getLicenseType</a></td></tr>
 <tr class="memitem:a242d808b65a3c99e7e4b510969e24f38" id="r_a242d808b65a3c99e7e4b510969e24f38"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a242d808b65a3c99e7e4b510969e24f38">setLogger:enableWarning:</a></td></tr>
 <tr class="memitem:a8f5bcef7ac2bc24fd365be3bd649c2e7" id="r_a8f5bcef7ac2bc24fd365be3bd649c2e7"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#a8f5bcef7ac2bc24fd365be3bd649c2e7">setDocumentAIModel:</a></td></tr>
 <tr class="memitem:aa1424ba0843464d89282dae0b4139f99" id="r_aa1424ba0843464d89282dae0b4139f99"><td class="memItemLeft" align="right" valign="top">(ErrorCode)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="#aa1424ba0843464d89282dae0b4139f99">setDocumentAIModel:gpuId:</a></td></tr>
@@ -118,6 +122,24 @@ Class Methods</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="common_8h_source.html#l00026">26</a> of file <a class="el" href="common_8h_source.html">common.h</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Method Documentation</h2>
+<a id="a437290e2bdd1e0cc5da85508a7178399" name="a437290e2bdd1e0cc5da85508a7178399"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a437290e2bdd1e0cc5da85508a7178399">&#9670;&#160;</a></span>getLicenseType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (LicenseType) getLicenseType </td>
+          <td></td>
+          <td class="paramname"><span class="paramname"><em></em></span></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the currently verified license type. Returns LicenseTypeUnknown before verification, after a failed verification, or while the library is releasing. Does not consume quota. </p>
+
+</div>
+</div>
 <a id="a994c7e7518e1d918ac48745d77f34010" name="a994c7e7518e1d918ac48745d77f34010"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a994c7e7518e1d918ac48745d77f34010">&#9670;&#160;</a></span>getPageCount:password:</h2>
 
@@ -187,6 +209,36 @@ Class Methods</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Initializes the SDK. Same as initialize:scanOfficeFonts: with scanOfficeFonts YES. </p>
+
+</div>
+</div>
+<a id="a0e85517358feb5fe74507a4d39bcb740" name="a0e85517358feb5fe74507a4d39bcb740"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e85517358feb5fe74507a4d39bcb740">&#9670;&#160;</a></span>initialize:scanOfficeFonts:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (void) <a class="el" href="#a06bb662e61396f1704b5388f16bdaac3">initialize:</a> </td>
+          <td></td>
+          <td class="paramtype">(NSString *)</td>          <td class="paramname"><span class="paramname"><em>resourcePath</em></span></td>
+        </tr>
+        <tr>
+          <td class="paramkey">scanOfficeFonts:</td>
+          <td></td>
+          <td class="paramtype">(BOOL)</td>          <td class="paramname"><span class="paramname"><em>scanOfficeFonts</em></span>&#160;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initializes the SDK. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resourcePath</td><td>Path to the resources needed by the SDK. It is not a font source: the converter only picks fonts the reader of the output can also draw, so fonts are taken from the system font directories only. </td></tr>
+    <tr><td class="paramname">scanOfficeFonts</td><td>YES to also scan the Microsoft Office font directories (Word's application bundle and the Office cloud-font cache). On macOS that cache lives in another app's container, and reading it makes the system ask the user to allow access to other apps' data; pass NO to skip those directories and avoid the prompt. Has no effect on iOS. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

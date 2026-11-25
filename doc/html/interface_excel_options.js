@@ -5,8 +5,11 @@ var interface_excel_options =
     [ "containAnnotation", "interface_excel_options.html#ac7b7eeb17389d7b9194dcf74b840cfbe", null ],
     [ "containImage", "interface_excel_options.html#a7291ee692b47d8cf36be9e894c98865c", null ],
     [ "CSVFormat", "interface_excel_options.html#aa195419fd51b2a37d891501bc09d339c", null ],
+    [ "customPageHeight", "interface_excel_options.html#ae90b5c7451fc52acc7d5c83053b70cdd", null ],
+    [ "customPageWidth", "interface_excel_options.html#a76b1038448f6a1268ce7bb0807a9322b", null ],
     [ "enableAILayout", "interface_excel_options.html#af390f1f583f7be1c8bdab767bf00bda1", null ],
     [ "enableAITableRecognition", "interface_excel_options.html#a55d5b2e6f4a49afbd3169dba0e3d0182", null ],
+    [ "enableAutoPageSize", "interface_excel_options.html#aaa2ed7ea5eb8913a9bd4ea17f78c67ba", null ],
     [ "enableDocumentDewarp", "interface_excel_options.html#a4cfa8ace7960ffe9222019e68d160df5", null ],
     [ "enableDocumentOrientationClassification", "interface_excel_options.html#a1f3e522e18228a7b33a96007543bb0ef", null ],
     [ "enableOCR", "interface_excel_options.html#afc662de24471d30bff59d2428c12acbf", null ],
@@ -17,5 +20,6 @@ var interface_excel_options =
     [ "ocrOption", "interface_excel_options.html#a6e897a14adc07360518454b4f08c404a", null ],
     [ "output_document_per_page", "interface_excel_options.html#adf1d638df090c3d2a258bdc5af0806d7", null ],
     [ "pageLayoutMode", "interface_excel_options.html#a660e0bffa6b5e7b5af8073cea2395eb4", null ],
-    [ "pageRanges", "interface_excel_options.html#adb52e3dd1c728886ce8d78c879384230", null ]
+    [ "pageRanges", "interface_excel_options.html#adb52e3dd1c728886ce8d78c879384230", null ],
+    [ "tableRecognitionAccuracy", "interface_excel_options.html#a87d14c7fd4a850811cc15cf1b12c8ce7", null ]
 ];

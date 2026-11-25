@@ -1,12 +1,8 @@
 var searchData=
 [
-  ['image_0',['image',['../interface_c_m_a_g_i_c_c_o_l_o_r_result.html#a27e51f2c96c0617b1544938e8926efd8',1,'CMAGICCOLORResult::image'],['../interface_c_d_e_w_a_r_p_result.html#a868343933576798417b1ff62c9994aa8',1,'CDEWARPResult::image']]],
-  ['imagecolormode_1',['imageColorMode',['../interface_convert_options.html#aaae5018424333963dc4ed89ef40f63f4',1,'ConvertOptions']]],
-  ['imageoptions_2',['ImageOptions',['../interface_image_options.html',1,'']]],
-  ['imagepathenhance_3',['imagePathEnhance',['../interface_convert_options.html#a3dad772d722345a1b79f3e053f26fce6',1,'ConvertOptions']]],
-  ['imagescaling_4',['imageScaling',['../interface_convert_options.html#afbd25eb8c9ec3ac48b31c5fe37d9ba8c',1,'ConvertOptions']]],
-  ['imagetype_5',['imageType',['../interface_convert_options.html#a86205d9eabc3bc56a51400de743aefbe',1,'ConvertOptions']]],
-  ['initialize_3a_6',['initialize:',['../interface_library_manager.html#a06bb662e61396f1704b5388f16bdaac3',1,'LibraryManager']]],
-  ['integrate_7',['Integrate',['../index.html#autotoc_md4',1,'']]],
-  ['iscancelled_8',['isCancelled',['../protocol_convert_callback-p.html#a2bf98366bcf87fd3db2426edbf692bd3',1,'ConvertCallback-p']]]
+  ['pagelayoutmode_0',['pageLayoutMode',['../interface_convert_options.html#a44b69b11aab54beb4016370ad2fb8217',1,'ConvertOptions::pageLayoutMode'],['../interface_word_options.html#a8c6b0704f9876233907e24870d724f90',1,'WordOptions::pageLayoutMode'],['../interface_excel_options.html#a660e0bffa6b5e7b5af8073cea2395eb4',1,'ExcelOptions::pageLayoutMode'],['../interface_html_options.html#aeb578b7034b6709016ed8c544568e15c',1,'HtmlOptions::pageLayoutMode']]],
+  ['pageranges_1',['pageRanges',['../interface_convert_options.html#a9f1acac27b19a2bbfebe7090b341381e',1,'ConvertOptions::pageRanges'],['../interface_word_options.html#af3334b01329d8f531aff024b2e4d250c',1,'WordOptions::pageRanges'],['../interface_excel_options.html#adb52e3dd1c728886ce8d78c879384230',1,'ExcelOptions::pageRanges'],['../interface_ppt_options.html#a61a0134840229c4fc00eef066f07bb0a',1,'PptOptions::pageRanges'],['../interface_html_options.html#af070ef4ca494bb5145c0bc38828cb113',1,'HtmlOptions::pageRanges'],['../interface_rtf_options.html#a03944ef3960476787e9c1298c800a05f',1,'RtfOptions::pageRanges'],['../interface_image_options.html#a165ae5fa43cb5aed24735d31cfb3c9c4',1,'ImageOptions::pageRanges'],['../interface_txt_options.html#a1a8a21cf3d583bc7804f13d1c1c798ec',1,'TxtOptions::pageRanges'],['../interface_json_options.html#a47f2c55d3688efd998279dae1894aab9',1,'JsonOptions::pageRanges'],['../interface_searchable_pdf_options.html#a7b984d809e266dabd387549ed5c8f85f',1,'SearchablePdfOptions::pageRanges'],['../interface_ofd_options.html#a903a54d619b4ed23a9918f5cae3b32e3',1,'OfdOptions::pageRanges'],['../interface_markdown_options.html#ae8f5384b830dbfa0c7736b9286f1b45f',1,'MarkdownOptions::pageRanges']]],
+  ['pathenhance_2',['PathEnhance',['../interface_image_options.html#ac1ef1c3b147bb05a00880814fbb690f7',1,'ImageOptions']]],
+  ['pdfsolid_20conversion_20objective_20c_20sdk_20macos_3',['PDFSolid Conversion Objective-C SDK (macOS)',['../md_mainpage.html',1,'']]],
+  ['pptoptions_4',['PptOptions',['../interface_ppt_options.html',1,'']]]
 ];

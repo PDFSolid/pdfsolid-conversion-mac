@@ -2,6 +2,9 @@ var interface_searchable_pdf_options =
 [
     [ "contain_page_background_image", "interface_searchable_pdf_options.html#a2331f52d8e439694c0be0eb62592f99e", null ],
     [ "containImage", "interface_searchable_pdf_options.html#a831085f793c5ab7e4287ffca0c507425", null ],
+    [ "customPageHeight", "interface_searchable_pdf_options.html#ad6fe91eb55198e9d5c9362aa0e2d6d10", null ],
+    [ "customPageWidth", "interface_searchable_pdf_options.html#af05e38767a8eb7b28975f56f2427154e", null ],
+    [ "enableAutoPageSize", "interface_searchable_pdf_options.html#a1063025963057076298ce541c9946b2f", null ],
     [ "enableDocumentDewarp", "interface_searchable_pdf_options.html#a9f7d687fc448cdcc91e58395fef0beb3", null ],
     [ "enableDocumentOrientationClassification", "interface_searchable_pdf_options.html#a15f8a5291241b3f8f0ff802fdf336997", null ],
     [ "enableOCR", "interface_searchable_pdf_options.html#aa85a96a46c133e54aa6489834fdd9229", null ],
@@ -11,5 +14,6 @@ var interface_searchable_pdf_options =
     [ "ocrOption", "interface_searchable_pdf_options.html#ab76cbba8f0b5d1a7dc8086d45851b79e", null ],
     [ "output_document_per_page", "interface_searchable_pdf_options.html#acbc4b6db30f49202519be4f68258639a", null ],
     [ "pageRanges", "interface_searchable_pdf_options.html#a7b984d809e266dabd387549ed5c8f85f", null ],
+    [ "tableRecognitionAccuracy", "interface_searchable_pdf_options.html#a2f5dae6c61124821bcb3e8f7f569f934", null ],
     [ "transparentText", "interface_searchable_pdf_options.html#a2aaa2a864fedba0373074cfcd5f18022", null ]
 ];

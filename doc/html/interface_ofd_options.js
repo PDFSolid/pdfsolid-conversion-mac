@@ -2,6 +2,9 @@ var interface_ofd_options =
 [
     [ "contain_page_background_image", "interface_ofd_options.html#a8ebcae8c4a0b77c5f220feae2fff1460", null ],
     [ "containImage", "interface_ofd_options.html#a3b17899c14fc0e73f86a53a7322c732f", null ],
+    [ "customPageHeight", "interface_ofd_options.html#a4ab6945033d0a8e90403a1fe798b92ae", null ],
+    [ "customPageWidth", "interface_ofd_options.html#af9f9a16c1fbbdd3443cb57a5ca726cf5", null ],
+    [ "enableAutoPageSize", "interface_ofd_options.html#afe3adb9669d1df72c2aa315794822aa8", null ],
     [ "enableDocumentDewarp", "interface_ofd_options.html#a3cd007013ad9481b16b9b06c69cf59a6", null ],
     [ "enableDocumentOrientationClassification", "interface_ofd_options.html#a0961677ac421817c38b5c61b147a5b18", null ],
     [ "enableOCR", "interface_ofd_options.html#a3a1dbf80663ebbee49d4d4b84f5c4553", null ],
@@ -11,5 +14,6 @@ var interface_ofd_options =
     [ "ocrOption", "interface_ofd_options.html#a3edeab07dff60308d427007666a819c2", null ],
     [ "output_document_per_page", "interface_ofd_options.html#ae42b8269cc92f6989f2123516221dbcb", null ],
     [ "pageRanges", "interface_ofd_options.html#a903a54d619b4ed23a9918f5cae3b32e3", null ],
+    [ "tableRecognitionAccuracy", "interface_ofd_options.html#abdae72a6cb53800579609e6715bee876", null ],
     [ "transparentText", "interface_ofd_options.html#a0806d789e87d2c7ed079f40b90658885", null ]
 ];

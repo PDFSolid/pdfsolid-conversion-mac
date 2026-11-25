@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['notes_0',['Distribution Notes',['../index.html#autotoc_md5',1,'']]],
-  ['ns_5fenum_1',['NS_ENUM',['../base__type_8h.html#a476b92d973eb54e4a672411851358cd2',1,'NS_ENUM(NSInteger, OCRLanguage):&#160;base_type.h'],['../base__type_8h.html#a35c73caa4a8cfa0d1671a03e0df4eb42',1,'NS_ENUM(NSInteger, ErrorCode):&#160;base_type.h'],['../base__type_8h.html#a7fb9ee80d24678fa4e243ef2e1b69497',1,'NS_ENUM(NSInteger, PageLayoutMode):&#160;base_type.h'],['../base__type_8h.html#a052534ec9c16aadaf126b48d66391d9e',1,'NS_ENUM(NSInteger, ImageColorMode):&#160;base_type.h'],['../base__type_8h.html#aa8b7a0ae888dd8a3718a9636d58ad4a8',1,'NS_ENUM(NSInteger, ImageType):&#160;base_type.h'],['../base__type_8h.html#a1525f457ff199c7392200af9ad6da7b0',1,'NS_ENUM(NSInteger, ExcelWorksheetOption):&#160;base_type.h'],['../base__type_8h.html#aac64e903cbfa3af2bff7b53edd388feb',1,'NS_ENUM(NSInteger, htmlPageOption):&#160;base_type.h'],['../base__type_8h.html#ac0e271f13cce464831a0b18a3d96bba1',1,'NS_ENUM(NSInteger, OCROption):&#160;base_type.h']]],
-  ['num_2',['num',['../interface_c_t_a_b_result.html#ae4bdbc16d86160e4ad8cfa6ebf5ade4c',1,'CTABResult']]]
+  ['usage_0',['Framework Usage',['../md_mainpage.html#autotoc_md2',1,'']]]
 ];

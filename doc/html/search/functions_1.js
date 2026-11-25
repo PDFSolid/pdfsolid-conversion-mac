@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['getlayoutresult_0',['getLayoutResult',['../protocol_convert_callback-p.html#a248b39679c2da7744f5d216daa1052f7',1,'ConvertCallback-p']]],
-  ['getocrresult_1',['getOcrResult',['../protocol_convert_callback-p.html#a5687dcc8fece35f1260233b60e0871a7',1,'ConvertCallback-p']]],
-  ['getpagecount_3apassword_3a_2',['getPageCount:password:',['../interface_library_manager.html#a994c7e7518e1d918ac48745d77f34010',1,'LibraryManager']]],
-  ['getremainingpagequota_3',['getRemainingPageQuota',['../interface_library_manager.html#ae8b62313a18586597482714ed0ba50c0',1,'LibraryManager']]],
-  ['gettableresult_4',['getTableResult',['../protocol_convert_callback-p.html#aaa3275ba8bb17731988d2781b274e03b',1,'ConvertCallback-p']]],
-  ['getversion_5',['getVersion',['../interface_library_manager.html#a888e7b9dac35736723f6935c64253807',1,'LibraryManager']]]
+  ['initialize_3a_0',['initialize:',['../interface_library_manager.html#a06bb662e61396f1704b5388f16bdaac3',1,'LibraryManager']]],
+  ['initialize_3ascanofficefonts_3a_1',['initialize:scanOfficeFonts:',['../interface_library_manager.html#a0e85517358feb5fe74507a4d39bcb740',1,'LibraryManager']]],
+  ['iscancelled_2',['isCancelled',['../protocol_convert_callback-p.html#a2bf98366bcf87fd3db2426edbf692bd3',1,'ConvertCallback-p']]]
 ];
